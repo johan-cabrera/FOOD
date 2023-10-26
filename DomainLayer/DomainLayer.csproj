@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45AF811B-BB62-4C4A-B4F5-1F9A6AA55232}</ProjectGuid>
+    <ProjectGuid>{EFBC2806-4673-4956-96ED-49860F67D5BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccess</RootNamespace>
-    <AssemblyName>DataAccess</AssemblyName>
+    <RootNamespace>DomainLayer</RootNamespace>
+    <AssemblyName>DomainLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,10 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection\ConnectionSql.cs" />
-    <Compile Include="Entities\InicioDA.cs" />
-    <Compile Include="Entities\LoginUser.cs" />
-    <Compile Include="Entities\UsuariosDA.cs" />
+    <Compile Include="Models\InicioModel.cs" />
+    <Compile Include="Models\LoginUserModel.cs" />
+    <Compile Include="Models\UsuariosModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -52,6 +51,10 @@
     <ProjectReference Include="..\CommonUtility\CommonUtility.csproj">
       <Project>{3b770879-02fc-44e2-aea8-640c6236ba43}</Project>
       <Name>CommonUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{45af811b-bb62-4c4a-b4f5-1f9a6aa55232}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

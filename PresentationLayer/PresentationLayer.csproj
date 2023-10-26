@@ -420,7 +420,7 @@
       <Project>{3b770879-02fc-44e2-aea8-640c6236ba43}</Project>
       <Name>CommonUtility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\DomainLayer.csproj">
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
       <Project>{efbc2806-4673-4956-96ed-49860f67d5bd}</Project>
       <Name>DomainLayer</Name>
     </ProjectReference>
