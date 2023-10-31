@@ -51,7 +51,15 @@ namespace FOOD
             currentId = lblTableID.Text;
             validate = int.TryParse(txtNumeroMesa.Text, out tableNumber);
             capacity = txtCapacidad.Text;
-            state = cbEstado.Text;
+
+            if (!tsActive.Checked)
+            {
+                state = "Inactiva";
+            }
+            else
+            {
+                state = cbEstado.Text;
+            }          
 
             if (validate && tableNumber > 0)
             {

@@ -211,8 +211,8 @@
   </data>
   <data name="panelMesas.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAm8AAAEvCAYAAAAThiZ5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbISURBVHhe7do/a1UHHMfhM3axKUgqNdSY9I/ximQowRhb
+        iVBORw0KGgoAAAANSUhEUgAAAm8AAAEuCAYAAADY2vXcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbDSURBVHhe7do/a1UHHMfhM3axKUgqNdSY9I/ximQowRhb
         6VLaxbFThy46OCh0tFDo1hdQcHDo6huQLm1dHITSQdpB6FBQ3BxykWIFh1sOHpC8gtwPPA98l/O7L+DD
         OXcAACDqyNtbuxunL9xd29x5unJstjAzMzOzw9nYY2OXvbk6+2JKtYM2tnZvnPvk0v6dn39dPHr8ZAEA
         wOEZe2zsss8vfbX/4dmLt6dke2Xl2JlPL3725f70WwAAlsjXl7+Zr723c2VKt2HYnO3d/+W3e9MZAIBl
@@ -238,10 +238,25 @@
         CBFvAAAh4g0AIES8AQCEiDcAgBDxBgAQIt4AAELEGwBAiHgDAAgRbwAAIeINACBEvAEAhIg3AIAQ8QYA
         ECLeAABCxBsAQIh4AwAIEW8AACHiDQAgRLwBAISINwCAEPEGABAi3gAAQsQbAECIeAMACBFvAAAh4g0A
         IES8AQCEiDcAgBDxBgAQIt4AAELEGwBAiHgDAAgRbwAAIeINACBEvAEAhIg3AIAQ8QYAECLeAABCxBsA
-        QIh4AwAIEW8AACHiDQAgRLwBAISINwCAEPEGABAi3gAAQsQbAECIeAMACBFvAAAh4g0AIES8AQCEiDcA
-        gJAD8Xb0+NmX/714MZ0AAFg2B+JtY2vv4e9/PJhOAAAsk0ePnyzWNneeTuk2DO+c/Oja1evfPpvuAAAs
-        kR9v/vRy/dT5W1O6vbI527t/47sf/p3PNRwAwDIYu2wMt/fPfPz3sL7+xpRtr737wbnvV09sPx+/qZqZ
-        mZnZ4W7ssvGN28rK9ltTrgEA0DEM/wMku3gsZzjJOgAAAABJRU5ErkJggg==
+        QIh4AwAIEW8AACHiDQAgRLwBAISINwCAEPEGABAi3gAAQsQbAECIeAMACBFvAAAh4g0AIES8AQCEHIi3
+        o8fPvvzvxYvpBADAsjkQbxtbew9//+PBdAIAYJk8evxksba583RKt2F45+RH165e//bZdAcAYIn8ePOn
+        l+unzt+a0u2Vzdne/Rvf/fDvfK7hAACWwdhlY7i9f+bjv4f19TembHvt3Q/Ofb96Yvv5+E3VzMzMzA53
+        Y5eNb9xWVrbfmnINAICOYfgfdELSpBn0nkoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Poppins Medium'; font-size: 11pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(15, 23, 42); text-align: left; }</value>
+  </data>
+  <data name="tsActive.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAWCAYAAACyjt6wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFpSURBVEhL7Zc9SwQxEIZTirCJzU60Ojs3c4X+DCuxtLQR
+        LP0J9nYW9lcLdra2W1raCbZ6oOInWug7exF0d7DRvURw4OEOZjL7MptkZo1msyXPW19tWKr2rB+eOs9v
+        fSC5C+ID/N90fmkxPv57cwu85SiMrefbdsK+sBTuwLXzw90oo2vOLc8huEbgTTvB1KDq3hGfqdVEQN1Z
+        kAjrw4UZDGaitMlrTVq5FhD4VFDYb8TJgZA9pwUmhXjsSl4xqNy28+FBDUqM3CIGp3WkOTOhlgqeK44s
+        wF58lNOrOnPhX+BP+QMCia80RxYQv4rAY9WZA+jLEFjt4C58VgMSI6OYkXaC+yabPvxBIZoorDf9WBqz
+        NGgtMBWW+KQR1xhGGxlxtMAUyLAsQ0xUNzF51SjpJTbmi7ZoWog47L21KOuryVSNgCNUE+O3nqAvRBh+
+        607lNLMlr2LBSI55O9FvI8MKOJSPtPj4T2bMO917IfFcVwOvAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="lblTableID.BaseStylesheet" xml:space="preserve">

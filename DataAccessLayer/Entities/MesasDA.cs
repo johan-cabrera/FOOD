@@ -95,23 +95,5 @@ namespace DataAccessLayer.Entities
                 }
             }
         }
-
-        //Metodo que elimina el valor de una tabla
-        public void deleteTable(string tableId)
-        {
-            using(SqlConnection conn = getConnection())
-            {
-                conn.Open();
-                using(SqlCommand command = new SqlCommand()) 
-                {
-                    command.Connection = conn;
-                    command.CommandText = "DELETE FROM Mesas WHERE MesaID = @id";
-
-                    command.Parameters.AddWithValue("@id", tableId);
-
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
     }
 }

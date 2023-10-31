@@ -34,18 +34,24 @@ namespace DataAccessLayer.Entities
                 using(SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
+                    try
+                    {
+                        command.CommandText = "SELECT SUM(Total) FROM Cuentas";
+                        TotalRevenue = Convert.ToDouble(command.ExecuteScalar());
 
-                    command.CommandText = "SELECT SUM(Total) FROM Cuentas";
-                    TotalRevenue = Convert.ToDouble(command.ExecuteScalar());
+                        command.CommandText = "SELECT COUNT(CuentaID) FROM Cuentas";
+                        TotalSales = Convert.ToInt32(command.ExecuteScalar());
 
-                    command.CommandText = "SELECT COUNT(CuentaID) FROM Cuentas";
-                    TotalSales = Convert.ToInt32(command.ExecuteScalar());
+                        command.CommandText = "SELECT SUM(CantidadClientes) FROM Ordenes";
+                        TotalCustomers = Convert.ToInt32(command.ExecuteScalar());
 
-                    command.CommandText = "SELECT SUM(CantidadClientes) FROM Ordenes";
-                    TotalCustomers = Convert.ToInt32(command.ExecuteScalar());
+                        command.CommandText = "SELECT COUNT(MesaID) FROM Mesas WHERE Estado = 'Disponible'";
+                        TotalTables = Convert.ToInt32(command.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
 
-                    command.CommandText = "SELECT COUNT(MesaID) FROM Mesas WHERE Estado = 'Disponible'";
-                    TotalTables = Convert.ToInt32(command.ExecuteScalar());
+                    }
                 }
             }
         }

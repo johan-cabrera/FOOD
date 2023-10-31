@@ -40,6 +40,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState1 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState2 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
+            Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState toggleState3 = new Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState();
             this.lblTitulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnCancelar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -51,6 +54,8 @@
             this.txtNumeroMesa = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelMesas = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tsActive = new Bunifu.UI.WinForms.BunifuToggleSwitch();
             this.lblTableID = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelMesas.SuspendLayout();
             this.SuspendLayout();
@@ -467,7 +472,7 @@
             this.txtNumeroMesa.Padding = new System.Windows.Forms.Padding(3);
             this.txtNumeroMesa.PasswordChar = '\0';
             this.txtNumeroMesa.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(171)))), ((int)(((byte)(171)))));
-            this.txtNumeroMesa.PlaceholderText = "Capacidad";
+            this.txtNumeroMesa.PlaceholderText = "Numero de mesa";
             this.txtNumeroMesa.ReadOnly = false;
             this.txtNumeroMesa.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNumeroMesa.SelectedText = "";
@@ -481,7 +486,7 @@
             this.txtNumeroMesa.TextMarginBottom = 0;
             this.txtNumeroMesa.TextMarginLeft = 10;
             this.txtNumeroMesa.TextMarginTop = 1;
-            this.txtNumeroMesa.TextPlaceholder = "Capacidad";
+            this.txtNumeroMesa.TextPlaceholder = "Numero de mesa";
             this.txtNumeroMesa.UseSystemPasswordChar = false;
             this.txtNumeroMesa.WordWrap = true;
             // 
@@ -510,6 +515,8 @@
             this.panelMesas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.panelMesas.BorderRadius = 8;
             this.panelMesas.BorderThickness = 1;
+            this.panelMesas.Controls.Add(this.bunifuLabel2);
+            this.panelMesas.Controls.Add(this.tsActive);
             this.panelMesas.Controls.Add(this.lblTableID);
             this.panelMesas.Controls.Add(this.txtNumeroMesa);
             this.panelMesas.Controls.Add(this.btnCancelar);
@@ -524,9 +531,68 @@
             this.panelMesas.Location = new System.Drawing.Point(0, 0);
             this.panelMesas.Name = "panelMesas";
             this.panelMesas.ShowBorders = true;
-            this.panelMesas.Size = new System.Drawing.Size(623, 303);
+            this.panelMesas.Size = new System.Drawing.Size(623, 302);
             this.panelMesas.TabIndex = 40;
             this.panelMesas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMesas_MouseDown);
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Poppins Medium", 11F);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.bunifuLabel2.Location = new System.Drawing.Point(31, 198);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(48, 26);
+            this.bunifuLabel2.TabIndex = 42;
+            this.bunifuLabel2.Text = "Activa";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // tsActive
+            // 
+            this.tsActive.Animation = 6;
+            this.tsActive.BackColor = System.Drawing.Color.Transparent;
+            this.tsActive.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsActive.BackgroundImage")));
+            this.tsActive.Checked = true;
+            this.tsActive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tsActive.InnerCirclePadding = 3;
+            this.tsActive.Location = new System.Drawing.Point(31, 230);
+            this.tsActive.Name = "tsActive";
+            this.tsActive.Size = new System.Drawing.Size(40, 22);
+            this.tsActive.TabIndex = 41;
+            this.tsActive.ThumbMargin = 3;
+            toggleState1.BackColor = System.Drawing.Color.DarkGray;
+            toggleState1.BackColorInner = System.Drawing.Color.White;
+            toggleState1.BorderColor = System.Drawing.Color.DarkGray;
+            toggleState1.BorderColorInner = System.Drawing.Color.White;
+            toggleState1.BorderRadius = 17;
+            toggleState1.BorderRadiusInner = 11;
+            toggleState1.BorderThickness = 1;
+            toggleState1.BorderThicknessInner = 1;
+            this.tsActive.ToggleStateDisabled = toggleState1;
+            toggleState2.BackColor = System.Drawing.Color.Empty;
+            toggleState2.BackColorInner = System.Drawing.Color.Empty;
+            toggleState2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            toggleState2.BorderColorInner = System.Drawing.Color.Empty;
+            toggleState2.BorderRadius = 1;
+            toggleState2.BorderRadiusInner = 1;
+            toggleState2.BorderThickness = 1;
+            toggleState2.BorderThicknessInner = 1;
+            this.tsActive.ToggleStateOff = toggleState2;
+            toggleState3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            toggleState3.BackColorInner = System.Drawing.Color.White;
+            toggleState3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            toggleState3.BorderColorInner = System.Drawing.Color.White;
+            toggleState3.BorderRadius = 17;
+            toggleState3.BorderRadiusInner = 11;
+            toggleState3.BorderThickness = 1;
+            toggleState3.BorderThicknessInner = 1;
+            this.tsActive.ToggleStateOn = toggleState3;
+            this.tsActive.Value = true;
             // 
             // lblTableID
             // 
@@ -552,7 +618,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(623, 303);
+            this.ClientSize = new System.Drawing.Size(623, 302);
             this.Controls.Add(this.panelMesas);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -579,5 +645,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPanel panelMesas;
         public Bunifu.UI.WinForms.BunifuLabel lblTableID;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        public Bunifu.UI.WinForms.BunifuToggleSwitch tsActive;
     }
 }

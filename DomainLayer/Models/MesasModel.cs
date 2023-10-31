@@ -64,12 +64,6 @@ namespace DomainLayer.Models
             }
         }
 
-        //Metodo que elimina el usuario
-        public void deleteTable(string tableId)
-        {
-            mesas.deleteTable(tableId);
-        }
-
         //Metodo que crea el ID de la tabla
         public string createTableID(int number)
         {

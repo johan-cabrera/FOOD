@@ -20,6 +20,7 @@ namespace FOOD
         }
         private void Mesas_Load(object sender, EventArgs e)
         {
+            cbFiltro.SelectedIndex = 0;
             showTables();
         }
         private void btnAgregarMesa_Click(object sender, EventArgs e)
@@ -40,7 +41,12 @@ namespace FOOD
             foreach (DataRow row in dt.Rows)
             {
                 string estado = row["Estado"].ToString();
-                Image pointImage = row["Estado"].ToString() == "Ocupada" ? Properties.Resources.redpoint : Properties.Resources.greenpoint;
+                Image pointImage;
+
+                if (row["Estado"].ToString() == "Disponible") pointImage = Properties.Resources.greenpoint;
+                else if (row["Estado"].ToString() == "Ocupada") pointImage = Properties.Resources.redpoint;
+                else pointImage = Properties.Resources.greypoint;
+
 
                 dgvMesas.Rows.Add(row["MesaID"], row["Capacidad"], pointImage, estado);
             }
@@ -70,6 +76,9 @@ namespace FOOD
                 updateTable.txtCapacidad.Text = row["Capacidad"].ToString();
                 switch (row["Estado"])
                 {
+                    case "Inactiva":
+                        updateTable.tsActive.Checked = false;
+                        break;
                     case "Disponible":
                         updateTable.cbEstado.SelectedIndex = 0;
                         break;
@@ -81,23 +90,42 @@ namespace FOOD
                 updateTable.FormClosed += updateDgv;
                 updateTable.ShowDialog();
             }
-            //Eliminar mesa con el ID seleccionnado
-            else if(colName == "eliminar")
-            {
-                DialogResult result = MessageBox.Show($"¿Estás seguro de que deseas eliminar la mesa con ID {tableID}?", "Eliminar mesa", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.OK)
-                {
-                    mesasModel.deleteTable(tableID);
-                    showTables();
-                }
-            }
         }
 
         //Metodo para actualizar el DGV cuando se cierre la ventana de crear/actualizar mesa
         private void updateDgv(object sender, FormClosedEventArgs e)
         {
             showTables();
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string filter = cbFiltro.Text;
+            dgvMesas.SuspendLayout();
+
+            foreach(DataGridViewRow row in dgvMesas.Rows)
+            {
+                //Restablecer la visivilidad de todas las filas
+                row.Visible = true;
+
+                if(filter != "Todos")
+                {
+                    //Verificar si la celda Estado contiene el filtro
+                    bool filterExist = false;
+
+                    if (row.Cells["Estado"].Value.ToString() == filter)
+                    {
+                        filterExist = true;
+                    }
+
+                    if(!filterExist)
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            dgvMesas.ResumeLayout();
         }
     }
 }
