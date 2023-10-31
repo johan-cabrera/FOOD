@@ -1,6 +1,6 @@
 ﻿using Bunifu.UI.WinForms;
 using CommonUtility.Cache;
-using Domain.Models;
+using DomainLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +47,7 @@ namespace FOOD
             string colName = dgvUsuarios.Columns[e.ColumnIndex].Name;
             string userID = dgvUsuarios.Rows[e.RowIndex].Cells["UserID"].Value.ToString();
 
-            //Obtener datos del usuario que se quiere editar
+            //Editar usuario con el ID seleccionado
             if(colName == "editar")
             {
                 UsuariosCU updateUser = new UsuariosCU();

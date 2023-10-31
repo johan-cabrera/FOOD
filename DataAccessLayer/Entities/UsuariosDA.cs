@@ -1,4 +1,4 @@
-﻿using DataAccess.Connection;
+﻿using DataAccessLayer.Connection;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Entities
+namespace DataAccessLayer.Entities
 {
     public class UsuariosDA : ConnectionSql
     {
@@ -42,9 +42,9 @@ namespace DataAccess.Entities
                 using(SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "INSERT INTO Usuarios VALUES (@ID, @name, @lastname, @email, @phone, @rol, @password, @creationDate, @birthDate, @image)";
+                    command.CommandText = "INSERT INTO Usuarios VALUES (@id, @name, @lastname, @email, @phone, @rol, @password, @creationDate, @birthDate, @image)";
 
-                    command.Parameters.AddWithValue("@ID", userID);
+                    command.Parameters.AddWithValue("@id", userID);
                     command.Parameters.AddWithValue("@name", name);
                     command.Parameters.AddWithValue("@lastname", lastname);
                     command.Parameters.AddWithValue("@email", email);

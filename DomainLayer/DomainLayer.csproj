@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Models\InicioModel.cs" />
     <Compile Include="Models\LoginUserModel.cs" />
+    <Compile Include="Models\MesasModel.cs" />
     <Compile Include="Models\UsuariosModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

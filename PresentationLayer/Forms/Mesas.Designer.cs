@@ -31,20 +31,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mesas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.dgvMesas = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.MesaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.btnAgregarMesa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.tableID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Capacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoImg = new System.Windows.Forms.DataGridViewImageColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnAgregarMesa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             this.dgvMesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMesas.ColumnHeadersHeight = 55;
             this.dgvMesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MesaID,
+            this.tableID,
             this.Capacidad,
             this.EstadoImg,
             this.Estado,
@@ -124,75 +124,7 @@
             this.dgvMesas.Size = new System.Drawing.Size(1018, 382);
             this.dgvMesas.TabIndex = 21;
             this.dgvMesas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // MesaID
-            // 
-            this.MesaID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.MesaID.FillWeight = 130.779F;
-            this.MesaID.Frozen = true;
-            this.MesaID.HeaderText = "Mesa";
-            this.MesaID.Name = "MesaID";
-            this.MesaID.ReadOnly = true;
-            this.MesaID.Width = 150;
-            // 
-            // Capacidad
-            // 
-            this.Capacidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Capacidad.FillWeight = 123.0994F;
-            this.Capacidad.Frozen = true;
-            this.Capacidad.HeaderText = "Capacidad";
-            this.Capacidad.Name = "Capacidad";
-            this.Capacidad.ReadOnly = true;
-            this.Capacidad.Width = 200;
-            // 
-            // EstadoImg
-            // 
-            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EstadoImg.HeaderText = "";
-            this.EstadoImg.Name = "EstadoImg";
-            this.EstadoImg.ReadOnly = true;
-            this.EstadoImg.Width = 50;
-            // 
-            // Estado
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Estado.FillWeight = 67.70091F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // editar
-            // 
-            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.editar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.editar.FillWeight = 60.9137F;
-            this.editar.HeaderText = "";
-            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
-            this.editar.MinimumWidth = 30;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.Width = 30;
-            // 
-            // eliminar
-            // 
-            this.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle5;
-            this.eliminar.FillWeight = 114.806F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
-            this.eliminar.MinimumWidth = 30;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Width = 30;
+            this.dgvMesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMesas_CellContentClick);
             // 
             // bunifuLabel10
             // 
@@ -283,7 +215,7 @@
             this.btnAgregarMesa.OnIdleState.BorderThickness = 1;
             this.btnAgregarMesa.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.btnAgregarMesa.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMesa.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarUsuario.OnIdleState.IconLeftImage")));
+            this.btnAgregarMesa.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMesa.OnIdleState.IconLeftImage")));
             this.btnAgregarMesa.OnIdleState.IconRightImage = null;
             this.btnAgregarMesa.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.btnAgregarMesa.OnPressedState.BorderRadius = 6;
@@ -302,6 +234,75 @@
             this.btnAgregarMesa.UseDefaultRadiusAndThickness = true;
             this.btnAgregarMesa.Click += new System.EventHandler(this.btnAgregarMesa_Click);
             // 
+            // tableID
+            // 
+            this.tableID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.tableID.FillWeight = 130.779F;
+            this.tableID.Frozen = true;
+            this.tableID.HeaderText = "Mesa";
+            this.tableID.Name = "tableID";
+            this.tableID.ReadOnly = true;
+            this.tableID.Width = 150;
+            // 
+            // Capacidad
+            // 
+            this.Capacidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Capacidad.FillWeight = 123.0994F;
+            this.Capacidad.Frozen = true;
+            this.Capacidad.HeaderText = "Capacidad";
+            this.Capacidad.Name = "Capacidad";
+            this.Capacidad.ReadOnly = true;
+            this.Capacidad.Width = 200;
+            // 
+            // EstadoImg
+            // 
+            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EstadoImg.HeaderText = "";
+            this.EstadoImg.Name = "EstadoImg";
+            this.EstadoImg.ReadOnly = true;
+            this.EstadoImg.Width = 50;
+            // 
+            // Estado
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Estado.FillWeight = 67.70091F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // editar
+            // 
+            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.editar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.editar.FillWeight = 60.9137F;
+            this.editar.HeaderText = "";
+            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.MinimumWidth = 30;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.Width = 30;
+            // 
+            // eliminar
+            // 
+            this.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.eliminar.FillWeight = 114.806F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.MinimumWidth = 30;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 30;
+            // 
             // Mesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +315,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Mesas";
             this.Text = "Mesas";
+            this.Load += new System.EventHandler(this.Mesas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,7 +327,7 @@
         private Bunifu.UI.WinForms.BunifuDataGridView dgvMesas;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarMesa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MesaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacidad;
         private System.Windows.Forms.DataGridViewImageColumn EstadoImg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;

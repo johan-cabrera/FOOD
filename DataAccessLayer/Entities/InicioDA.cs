@@ -1,4 +1,4 @@
-﻿using DataAccess.Connection;
+﻿using DataAccessLayer.Connection;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Entities
+namespace DataAccessLayer.Entities
 {
     public struct RevenueByDate
     {

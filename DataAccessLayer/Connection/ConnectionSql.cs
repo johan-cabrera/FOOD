@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Connection
+namespace DataAccessLayer.Connection
 {
     public abstract class ConnectionSql
     {

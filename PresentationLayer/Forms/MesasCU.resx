@@ -127,7 +127,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+QAAALBCAYAAADRS2sgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAEnpJREFUeF7t3bFuk1cYgGFfApfGHcAd0IkQROKyYMwAZaGiQwYk2FAuBBQEMyV0
+        DAAACwwBP0AiyAAAEnpJREFUeF7t3bFuk1cYgGFfApfGHcAd0IkQROKyYMwAZaGiQwYk2FAuBBQEMyV0
         ALGQdGnYcH3SIIH0S0Br+i7PJz2SJZ//318dn+PZ1Pw0n5+7ev3Wpa35Yv/K7s3DtRUAAADwzQ5HU29f
         X144S+2vz+X5jfPbu8vj3/YerZ4evFgdHf25+vjxIwAAAPCN3rx9t3qybuoHjx6fxvlXw3y96Jfl7V9X
         v7/6Y/KFAAAAwPd5f3S8urlu7a2dxc9n+f3ljC/u3ttbnZx8mHwBAAAA8O/8dXKyGs29NV/eOcvwf+bK
@@ -244,7 +244,10 @@
         mZnZ4W7ssvGN28rK9ltTrgEA0DEM/wMku3gsZzjJOgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="lblTableID.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Poppins'; font-size: 16pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="txtNumeroMesa.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKYAAAAoCAYAAAB0MoHfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVHhe7dw9ToVAFIbhWYZLcBmWbsDSBQLDb7CgYQuW
@@ -282,7 +285,7 @@
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Poppins Medium'; font-size: 11pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(15, 23, 42); text-align: left; }</value>
   </data>
-  <data name="txtNombres.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtCapacidad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKYAAAAoCAYAAAB0MoHfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVHhe7dw9ToVAFIbhWYZLcBmWbsDSBQLDb7CgYQuW

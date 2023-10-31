@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using DataAccess.Connection;
+using DataAccessLayer.Connection;
 using System.Data;
 using CommonUtility.Cache;
 
-namespace DataAccess.Entities
+namespace DataAccessLayer.Entities
 {
     public class LoginUser : ConnectionSql 
     {
