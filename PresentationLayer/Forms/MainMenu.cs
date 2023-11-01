@@ -135,6 +135,7 @@ namespace FOOD
         private void btnCuentas_Click(object sender, EventArgs e)
         {
             activateBtn(sender);
+            openChildForm(new Cuentas());
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

@@ -32,20 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvUsuarios = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnAgregarUsuario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.txtFiltrar = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.scrollbar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +49,9 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnAgregarUsuario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.txtFiltrar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -162,6 +161,72 @@
             this.dgvUsuarios.TabIndex = 18;
             this.dgvUsuarios.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            // 
+            // UserID
+            // 
+            this.UserID.FillWeight = 81.25828F;
+            this.UserID.HeaderText = "ID";
+            this.UserID.Name = "UserID";
+            this.UserID.ReadOnly = true;
+            // 
+            // fullName
+            // 
+            this.fullName.FillWeight = 140.3211F;
+            this.fullName.HeaderText = "Nombre";
+            this.fullName.Name = "fullName";
+            this.fullName.ReadOnly = true;
+            // 
+            // rol
+            // 
+            this.rol.FillWeight = 68.72766F;
+            this.rol.HeaderText = "Rol";
+            this.rol.Name = "rol";
+            this.rol.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.FillWeight = 77.26238F;
+            this.phone.HeaderText = "Telefono";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.FillWeight = 156.711F;
+            this.email.HeaderText = "Correo";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // editar
+            // 
+            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.editar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.editar.FillWeight = 60.9137F;
+            this.editar.HeaderText = "";
+            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.MinimumWidth = 30;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.Width = 30;
+            // 
+            // eliminar
+            // 
+            this.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.eliminar.FillWeight = 114.806F;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
+            this.eliminar.MinimumWidth = 30;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 30;
             // 
             // iconPictureBox1
             // 
@@ -345,121 +410,12 @@
             this.txtFiltrar.WordWrap = true;
             this.txtFiltrar.TextChange += new System.EventHandler(this.txtFiltrar_TextChange);
             // 
-            // scrollbar1
-            // 
-            this.scrollbar1.AllowCursorChanges = true;
-            this.scrollbar1.AllowHomeEndKeysDetection = false;
-            this.scrollbar1.AllowIncrementalClickMoves = true;
-            this.scrollbar1.AllowMouseDownEffects = true;
-            this.scrollbar1.AllowMouseHoverEffects = true;
-            this.scrollbar1.AllowScrollingAnimations = true;
-            this.scrollbar1.AllowScrollKeysDetection = true;
-            this.scrollbar1.AllowScrollOptionsMenu = true;
-            this.scrollbar1.AllowShrinkingOnFocusLost = false;
-            this.scrollbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.scrollbar1.BackgroundColor = System.Drawing.Color.White;
-            this.scrollbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("scrollbar1.BackgroundImage")));
-            this.scrollbar1.BindingContainer = null;
-            this.scrollbar1.BorderColor = System.Drawing.Color.White;
-            this.scrollbar1.BorderRadius = 6;
-            this.scrollbar1.BorderThickness = 1;
-            this.scrollbar1.DurationBeforeShrink = 2000;
-            this.scrollbar1.LargeChange = 80;
-            this.scrollbar1.Location = new System.Drawing.Point(1067, 309);
-            this.scrollbar1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.scrollbar1.Maximum = 100;
-            this.scrollbar1.Minimum = 0;
-            this.scrollbar1.MinimumThumbLength = 18;
-            this.scrollbar1.Name = "scrollbar1";
-            this.scrollbar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.scrollbar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.scrollbar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.scrollbar1.ScrollBarBorderColor = System.Drawing.Color.White;
-            this.scrollbar1.ScrollBarColor = System.Drawing.Color.White;
-            this.scrollbar1.ShrinkSizeLimit = 1;
-            this.scrollbar1.Size = new System.Drawing.Size(15, 341);
-            this.scrollbar1.SmallChange = 1;
-            this.scrollbar1.TabIndex = 19;
-            this.scrollbar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(208)))), ((int)(((byte)(214)))));
-            this.scrollbar1.ThumbLength = 268;
-            this.scrollbar1.ThumbMargin = 1;
-            this.scrollbar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.scrollbar1.Value = 0;
-            // 
-            // UserID
-            // 
-            this.UserID.FillWeight = 81.25828F;
-            this.UserID.HeaderText = "ID";
-            this.UserID.Name = "UserID";
-            this.UserID.ReadOnly = true;
-            // 
-            // fullName
-            // 
-            this.fullName.FillWeight = 140.3211F;
-            this.fullName.HeaderText = "Nombre";
-            this.fullName.Name = "fullName";
-            this.fullName.ReadOnly = true;
-            // 
-            // rol
-            // 
-            this.rol.FillWeight = 68.72766F;
-            this.rol.HeaderText = "Rol";
-            this.rol.Name = "rol";
-            this.rol.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.FillWeight = 77.26238F;
-            this.phone.HeaderText = "Telefono";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.FillWeight = 156.711F;
-            this.email.HeaderText = "Correo";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // editar
-            // 
-            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle3.NullValue")));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.editar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.editar.FillWeight = 60.9137F;
-            this.editar.HeaderText = "";
-            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
-            this.editar.MinimumWidth = 30;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.Width = 30;
-            // 
-            // eliminar
-            // 
-            this.eliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.eliminar.FillWeight = 114.806F;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Image = ((System.Drawing.Image)(resources.GetObject("eliminar.Image")));
-            this.eliminar.MinimumWidth = 30;
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Width = 30;
-            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 34F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 699);
-            this.Controls.Add(this.scrollbar1);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.btnAgregarUsuario);
@@ -488,7 +444,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarUsuario;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvUsuarios;
-        private Bunifu.UI.WinForms.BunifuVScrollBar scrollbar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn rol;

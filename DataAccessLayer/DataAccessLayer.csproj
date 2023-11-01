@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\ConnectionSql.cs" />
+    <Compile Include="Entities\CuentasDA.cs" />
     <Compile Include="Entities\DetalleOrdenDA.cs" />
     <Compile Include="Entities\InicioDA.cs" />
     <Compile Include="Entities\LoginUser.cs" />

@@ -367,4 +367,19 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJW644d+MA0jPqhO6SAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="txtFiltrar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAUUAAAAkCAYAAAAeqygWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVHhe7ddBTsJAGIbhHsMjeAyXXsClBwRaSgku2PQK
+        Lt0TVoAxJg0klaQyMok/iSewz5N8i3a6fjMtAPjDdDq9a5rmpa7r/Ww2G8zM/vtS75bLZVuW5X1O4VUK
+        4mKxeN9sNkPXdQPAGKTebbfbYbVa7W7CmG6IKYgAY3Q4HIZLB99yEouiqqpj3/f5GGB80u90TmJRpAeA
+        MRNFgEAUAQJRBAhEESAQRYBAFAECUQQIRBEgEEWAQBQBAlEECEQRIBBFgEAUAQJRBAhEESAQRYBAFAEC
+        UQQIRBEgEEWAQBQBAlEECEQRIBBFgOAmimVZfp3P53wEMD43UWya5nW32+UjgHHpum6o63qfk/jz+/yw
+        Xq8/TqdT/gRgHPq+H9q2/ZjP5085iVeTyeTx8vIzXSHNzMayqqqOl1vic04hAL+K4ht1JSJzPLp59wAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Poppins Medium'; font-size: 11pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(15, 23, 42); text-align: left; }</value>
+  </data>
 </root>

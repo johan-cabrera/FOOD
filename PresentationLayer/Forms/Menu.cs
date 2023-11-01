@@ -54,6 +54,7 @@ namespace FOOD
         private void Menu_Load(object sender, EventArgs e)
         {
             showMenu();
+            cbFiltro.SelectedIndex = 0;
         }
 
         private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -93,6 +94,72 @@ namespace FOOD
                 updateMenu.FormClosed += updateDgv;
                 updateMenu.ShowDialog();
             }
+        }
+
+        private void txtFiltrar_TextChange(object sender, EventArgs e)
+        {
+            string filter = txtFiltrar.Text;
+            dgvMenu.SuspendLayout();
+
+            foreach (DataGridViewRow row in dgvMenu.Rows)
+            {
+                //Restablecer la visibilidad de todas las filas
+                row.Visible = true;
+
+                if (!string.IsNullOrEmpty(filter))
+                {
+                    //Verificar si alguna celda contiene el filtro
+                    bool filterExist = false;
+
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value != null && cell.Value.ToString().IndexOf(filter, StringComparison.OrdinalIgnoreCase) >= 0)
+                        {
+                            filterExist = true;
+                            break;
+                        }
+                    }
+
+                    //Si no exite ninguna coincidencia con el filtro, la fila se oculta
+                    if (!filterExist)
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            dgvMenu.ResumeLayout();
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string filter = cbFiltro.Text;
+
+            dgvMenu.SuspendLayout();
+
+            foreach (DataGridViewRow row in dgvMenu.Rows)
+            {
+                //Restablecer la visibilidad de todas las filas
+                row.Visible = true;
+
+                if (filter != "Todos")
+                {
+                    //verificar si la celda Estado contiene el filtro
+                    bool filterExist = false;
+
+                    if (row.Cells["Estado"].Value.ToString() == filter)
+                    {
+                        filterExist = true;
+                    }
+
+                    if (!filterExist)
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            dgvMenu.ResumeLayout();
         }
     }
 }

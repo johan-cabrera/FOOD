@@ -19,6 +19,7 @@ namespace FOOD
         DetalleOrdenModel detalleOrdenModel = new DetalleOrdenModel();
         OrdenesModel ordenesModel = new OrdenesModel();
 
+
         public OrdenesCU()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace FOOD
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            string action = lblTitulo.Text;
             string orderID, tableID, state, quantity;
             bool actionSuccess;
 
@@ -41,17 +43,32 @@ namespace FOOD
             state = cbEstado.Text;
             quantity = txtClientes.Text;
 
-            actionSuccess = ordenesModel.updateOrders(orderID, tableID, state, quantity);
 
-            if (actionSuccess)
+            if(action == "Crear Orden")
             {
-                MessageBox.Show("Orden actualizada");
-                this.Close();
+                orderID = ordenesModel.inserOrder(tableID, state, quantity).ToString();
+                MessageBox.Show("Orden Creada");
+                lblTitulo.Text = "ORDEN:";
+                lblOrdenID.Text = orderID;
+                lblOrdenID.Visible = true;
+                
             }
-            else
+            else if(action == "ORDEN:")
             {
-                MessageBox.Show("Error al actualizar orden");
+                actionSuccess = ordenesModel.updateOrders(orderID, tableID, state, quantity);
+
+                if (actionSuccess)
+                {
+                    MessageBox.Show("Orden Actualizada");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar orden");
+                }
             }
+
+            
         }
 
         private void OrdenesCU_Load(object sender, EventArgs e)
@@ -65,20 +82,22 @@ namespace FOOD
         //Metodo para llenar los combobox de mesas
         private void loadTables()
         {
-            DataTable dt = mesasModel.showTables();
-            foreach (DataRow row in dt.Rows)
+            List<string> tables = ordenesModel.getTablesInOrders();
+            DataTable allTables = mesasModel.showTables();
+
+            foreach (DataRow row in allTables.Rows)
             {
-
-                cbMesas.Items.Add(row["MesaID"]);
-               
+                if ((!tables.Contains(row["MesaID"]) && row["Estado"].ToString() != "Inactiva"))
+                {
+                    cbMesas.Items.Add(row["MesaID"]);
+                }                
             }
-
             for (int i = 0; i < cbMesas.Items.Count; i++)
             {
                 if (cbMesas.Items[i].ToString() == lblMesaID.Text)
                 {
                     cbMesas.SelectedIndex = i;
-                    break; 
+                    break;
                 }
             }
         }
@@ -176,7 +195,7 @@ namespace FOOD
 
         private void dgvDetalleOrden_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            if (e.RowIndex < 0 || cbEstado.Text == "Cerrada") return;
 
             string colName = dgvDetalleOrden.Columns[e.ColumnIndex].Name;
             string dishID = dgvDetalleOrden.Rows[e.RowIndex].Cells["id"].Value.ToString();
@@ -207,5 +226,12 @@ namespace FOOD
                 }
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }
