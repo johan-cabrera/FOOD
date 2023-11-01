@@ -61,6 +61,7 @@ namespace FOOD
         private void Ordenes_Load(object sender, EventArgs e)
         {
             showOrders();
+            cbFiltro.SelectedIndex = 0;
         }
 
         private void dgvOrdenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,6 +103,68 @@ namespace FOOD
                 updateOrder.FormClosed += updateDgv;
                 updateOrder.ShowDialog();
             }
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string filter = cbFiltro.Text;
+
+            dgvOrdenes.SuspendLayout();
+
+            foreach(DataGridViewRow row in dgvOrdenes.Rows)
+            {
+                //Restablecer la visibilidad de todas las filas
+                row.Visible = true;
+
+                if(filter != "Todos")
+                {
+                    //verificar si la celda Estado contiene el filtro
+                    bool filterExist = false;
+
+                    if (row.Cells["Estado"].Value.ToString() == filter)
+                    {
+                        filterExist = true;
+                    }
+
+                    if (!filterExist)
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            dgvOrdenes.ResumeLayout();
+        }
+
+        private void txtFiltro_TextChange(object sender, EventArgs e)
+        {
+            string filter = txtFiltro.Text;
+            dgvOrdenes.SuspendLayout();
+
+            foreach (DataGridViewRow row in dgvOrdenes.Rows)
+            {
+                //Restablecer la visibilidad de todas las filas
+                row.Visible = true;
+
+                if (!string.IsNullOrEmpty(filter))
+                {
+                    //Verificar si alguna celda contiene el filtro
+                    bool filterExist = false;
+
+                    if (row.Cells["orderID"].Value.ToString() == filter)
+                    {
+                        filterExist = true;
+                    }
+
+                    //Si no exite ninguna coincidencia con el filtro, la fila se oculta
+                    if (!filterExist)
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
+            dgvOrdenes.ResumeLayout();
         }
     }
 }
