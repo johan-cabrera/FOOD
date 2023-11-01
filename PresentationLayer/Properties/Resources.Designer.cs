@@ -83,9 +83,29 @@ namespace FOOD.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap orangepoint {
+            get {
+                object obj = ResourceManager.GetObject("orangepoint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap redpoint {
             get {
                 object obj = ResourceManager.GetObject("redpoint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellowpoint {
+            get {
+                object obj = ResourceManager.GetObject("yellowpoint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

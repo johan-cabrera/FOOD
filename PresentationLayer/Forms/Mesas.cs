@@ -31,7 +31,7 @@ namespace FOOD
             createTable.ShowDialog();
         }
 
-        //Metodo para mostrar las tablas en el DGV
+        //Metodo para mostrar las mesas en el DGV
         private void showTables()
         {
             dgvMesas.Rows.Clear();
@@ -43,8 +43,8 @@ namespace FOOD
                 string estado = row["Estado"].ToString();
                 Image pointImage;
 
-                if (row["Estado"].ToString() == "Disponible") pointImage = Properties.Resources.greenpoint;
-                else if (row["Estado"].ToString() == "Ocupada") pointImage = Properties.Resources.redpoint;
+                if (estado == "Disponible") pointImage = Properties.Resources.greenpoint;
+                else if (estado == "Ocupada") pointImage = Properties.Resources.redpoint;
                 else pointImage = Properties.Resources.greypoint;
 
 
@@ -54,6 +54,8 @@ namespace FOOD
 
         private void dgvMesas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+
             string colName = dgvMesas.Columns[e.ColumnIndex].Name;
             string tableID = dgvMesas.Rows[e.RowIndex].Cells["tableID"].Value.ToString();
 
@@ -62,8 +64,8 @@ namespace FOOD
             {
                 MesasCU updateTable = new MesasCU();
 
-                //Se guardan y muestran los datos de la tabla que se quiere actualizar
-                DataTable dt = mesasModel.getTables(tableID);
+                //Se guardan y muestran los datos de la mesa que se quiere actualizar
+                DataTable dt = mesasModel.getTable(tableID);
                 DataRow row = dt.Rows[0];
 
                 updateTable.lblTitulo.Text = "Editar mesa";

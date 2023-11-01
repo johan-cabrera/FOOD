@@ -604,9 +604,9 @@
             this.lblTableID.Location = new System.Drawing.Point(522, 35);
             this.lblTableID.Name = "lblTableID";
             this.lblTableID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTableID.Size = new System.Drawing.Size(72, 37);
+            this.lblTableID.Size = new System.Drawing.Size(20, 37);
             this.lblTableID.TabIndex = 40;
-            this.lblTableID.Text = "User ID";
+            this.lblTableID.Text = "ID";
             this.lblTableID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTableID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblTableID.Visible = false;

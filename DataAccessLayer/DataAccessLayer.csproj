@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection\ConnectionSql.cs" />
+    <Compile Include="Entities\DetalleOrdenDA.cs" />
     <Compile Include="Entities\InicioDA.cs" />
     <Compile Include="Entities\LoginUser.cs" />
+    <Compile Include="Entities\MenuDA.cs" />
     <Compile Include="Entities\MesasDA.cs" />
+    <Compile Include="Entities\OrdenesDA.cs" />
     <Compile Include="Entities\UsuariosDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -129,6 +129,7 @@ namespace FOOD
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
             activateBtn(sender);
+            openChildForm(new Ordenes());
         }
 
         private void btnCuentas_Click(object sender, EventArgs e)
@@ -139,6 +140,7 @@ namespace FOOD
         private void btnMenu_Click(object sender, EventArgs e)
         {
             activateBtn(sender);
+            openChildForm(new Menu());
         }
 
         private void btnReportes_Click(object sender, EventArgs e)

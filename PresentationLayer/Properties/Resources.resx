@@ -124,7 +124,13 @@
   <data name="greypoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\greypoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="orangepoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orangepoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="redpoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\redpoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellowpoint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellowpoint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

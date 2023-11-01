@@ -33,7 +33,7 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que inseta una nueva tabla
+        //Metodo que inseta una nueva mesa
         public void insertTable(string tableID, string capacity, string state)
         {
             using (SqlConnection conn = getConnection())
@@ -53,8 +53,8 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que obtiene el valor de una tabla en especifico
-        public DataTable GetTable(string tableID)
+        //Metodo que obtiene el valor de una mesa en especifico
+        public DataTable getTable(string tableID)
         {
             using(SqlConnection conn = getConnection())
             {
@@ -75,7 +75,7 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que actualiza el valor de una tabla
+        //Metodo que actualiza el valor de una mesa
         public void updateTable(string currentId, string tableID, string capacity, string state)
         {
             using( SqlConnection conn = getConnection())

@@ -27,7 +27,7 @@ namespace DomainLayer.Models
 
             tableID = createTableID(number);
 
-            if(getTables(tableID).Rows.Count == 0)
+            if(getTable(tableID).Rows.Count == 0)
             {
                 mesas.insertTable(tableID, capacity, state);
                 return true;
@@ -39,10 +39,10 @@ namespace DomainLayer.Models
         }
 
         //Metodo que recibe y retorna los datos de una mesa en especifico
-        public DataTable getTables(string tableID) 
+        public DataTable getTable(string tableID) 
         {
             DataTable table = new DataTable();
-            table = mesas.GetTable(tableID);
+            table = mesas.getTable(tableID);
             return table;
         }
 
@@ -53,7 +53,7 @@ namespace DomainLayer.Models
 
             newId = createTableID(number);
 
-            if (getTables(newId).Rows.Count == 0 || newId == currentId)
+            if (getTable(newId).Rows.Count == 0 || newId == currentId)
             {
                 mesas.updateTable(currentId, newId, capacity, state);
                 return true;

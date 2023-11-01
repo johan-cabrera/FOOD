@@ -44,6 +44,8 @@ namespace FOOD
         //Evento para actualizar/eliminar un usuario
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return; 
+
             string colName = dgvUsuarios.Columns[e.ColumnIndex].Name;
             string userID = dgvUsuarios.Rows[e.RowIndex].Cells["UserID"].Value.ToString();
 

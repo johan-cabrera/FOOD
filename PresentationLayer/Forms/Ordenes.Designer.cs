@@ -39,13 +39,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnAgregarMesa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnAgregarOrden = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtFiltrar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbFiltro = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dgvMesas = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dgvOrdenes = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.orderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoImg = new System.Windows.Forms.DataGridViewImageColumn();
@@ -53,98 +53,99 @@
             this.customers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregarMesa
+            // btnAgregarOrden
             // 
-            this.btnAgregarMesa.AllowAnimations = true;
-            this.btnAgregarMesa.AllowMouseEffects = true;
-            this.btnAgregarMesa.AllowToggling = false;
-            this.btnAgregarMesa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarMesa.AnimationSpeed = 200;
-            this.btnAgregarMesa.AutoGenerateColors = false;
-            this.btnAgregarMesa.AutoRoundBorders = false;
-            this.btnAgregarMesa.AutoSizeLeftIcon = true;
-            this.btnAgregarMesa.AutoSizeRightIcon = true;
-            this.btnAgregarMesa.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarMesa.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMesa.BackgroundImage")));
-            this.btnAgregarMesa.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAgregarMesa.ButtonText = "Agregar orden";
-            this.btnAgregarMesa.ButtonTextMarginLeft = 0;
-            this.btnAgregarMesa.ColorContrastOnClick = 45;
-            this.btnAgregarMesa.ColorContrastOnHover = 45;
-            this.btnAgregarMesa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarOrden.AllowAnimations = true;
+            this.btnAgregarOrden.AllowMouseEffects = true;
+            this.btnAgregarOrden.AllowToggling = false;
+            this.btnAgregarOrden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarOrden.AnimationSpeed = 200;
+            this.btnAgregarOrden.AutoGenerateColors = false;
+            this.btnAgregarOrden.AutoRoundBorders = false;
+            this.btnAgregarOrden.AutoSizeLeftIcon = true;
+            this.btnAgregarOrden.AutoSizeRightIcon = true;
+            this.btnAgregarOrden.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarOrden.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarOrden.BackgroundImage")));
+            this.btnAgregarOrden.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAgregarOrden.ButtonText = "Agregar orden";
+            this.btnAgregarOrden.ButtonTextMarginLeft = 0;
+            this.btnAgregarOrden.ColorContrastOnClick = 45;
+            this.btnAgregarOrden.ColorContrastOnHover = 45;
+            this.btnAgregarOrden.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
-            this.btnAgregarMesa.CustomizableEdges = borderEdges1;
-            this.btnAgregarMesa.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAgregarMesa.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAgregarMesa.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAgregarMesa.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAgregarMesa.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnAgregarMesa.Font = new System.Drawing.Font("Poppins Medium", 11F);
-            this.btnAgregarMesa.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMesa.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarMesa.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarMesa.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAgregarMesa.IconMarginLeft = 11;
-            this.btnAgregarMesa.IconPadding = 8;
-            this.btnAgregarMesa.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarMesa.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarMesa.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAgregarMesa.IconSize = 1;
-            this.btnAgregarMesa.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.IdleBorderRadius = 6;
-            this.btnAgregarMesa.IdleBorderThickness = 1;
-            this.btnAgregarMesa.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMesa.IdleIconLeftImage")));
-            this.btnAgregarMesa.IdleIconRightImage = null;
-            this.btnAgregarMesa.IndicateFocus = false;
-            this.btnAgregarMesa.Location = new System.Drawing.Point(888, 197);
-            this.btnAgregarMesa.Name = "btnAgregarMesa";
-            this.btnAgregarMesa.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAgregarMesa.OnDisabledState.BorderRadius = 6;
-            this.btnAgregarMesa.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAgregarMesa.OnDisabledState.BorderThickness = 1;
-            this.btnAgregarMesa.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAgregarMesa.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAgregarMesa.OnDisabledState.IconLeftImage = null;
-            this.btnAgregarMesa.OnDisabledState.IconRightImage = null;
-            this.btnAgregarMesa.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.btnAgregarMesa.onHoverState.BorderRadius = 6;
-            this.btnAgregarMesa.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAgregarMesa.onHoverState.BorderThickness = 1;
-            this.btnAgregarMesa.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
-            this.btnAgregarMesa.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMesa.onHoverState.IconLeftImage = null;
-            this.btnAgregarMesa.onHoverState.IconRightImage = null;
-            this.btnAgregarMesa.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.OnIdleState.BorderRadius = 6;
-            this.btnAgregarMesa.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAgregarMesa.OnIdleState.BorderThickness = 1;
-            this.btnAgregarMesa.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMesa.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMesa.OnIdleState.IconLeftImage")));
-            this.btnAgregarMesa.OnIdleState.IconRightImage = null;
-            this.btnAgregarMesa.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.OnPressedState.BorderRadius = 6;
-            this.btnAgregarMesa.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnAgregarMesa.OnPressedState.BorderThickness = 1;
-            this.btnAgregarMesa.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.btnAgregarMesa.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMesa.OnPressedState.IconLeftImage = null;
-            this.btnAgregarMesa.OnPressedState.IconRightImage = null;
-            this.btnAgregarMesa.Size = new System.Drawing.Size(170, 36);
-            this.btnAgregarMesa.TabIndex = 24;
-            this.btnAgregarMesa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarMesa.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAgregarMesa.TextMarginLeft = 0;
-            this.btnAgregarMesa.TextPadding = new System.Windows.Forms.Padding(0, 1, 8, 0);
-            this.btnAgregarMesa.UseDefaultRadiusAndThickness = true;
+            this.btnAgregarOrden.CustomizableEdges = borderEdges1;
+            this.btnAgregarOrden.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAgregarOrden.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarOrden.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarOrden.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarOrden.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnAgregarOrden.Font = new System.Drawing.Font("Poppins Medium", 11F);
+            this.btnAgregarOrden.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarOrden.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarOrden.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarOrden.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAgregarOrden.IconMarginLeft = 11;
+            this.btnAgregarOrden.IconPadding = 8;
+            this.btnAgregarOrden.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarOrden.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarOrden.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAgregarOrden.IconSize = 1;
+            this.btnAgregarOrden.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.IdleBorderRadius = 6;
+            this.btnAgregarOrden.IdleBorderThickness = 1;
+            this.btnAgregarOrden.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarOrden.IdleIconLeftImage")));
+            this.btnAgregarOrden.IdleIconRightImage = null;
+            this.btnAgregarOrden.IndicateFocus = false;
+            this.btnAgregarOrden.Location = new System.Drawing.Point(888, 197);
+            this.btnAgregarOrden.Name = "btnAgregarOrden";
+            this.btnAgregarOrden.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarOrden.OnDisabledState.BorderRadius = 6;
+            this.btnAgregarOrden.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAgregarOrden.OnDisabledState.BorderThickness = 1;
+            this.btnAgregarOrden.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarOrden.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarOrden.OnDisabledState.IconLeftImage = null;
+            this.btnAgregarOrden.OnDisabledState.IconRightImage = null;
+            this.btnAgregarOrden.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
+            this.btnAgregarOrden.onHoverState.BorderRadius = 6;
+            this.btnAgregarOrden.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAgregarOrden.onHoverState.BorderThickness = 1;
+            this.btnAgregarOrden.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(69)))));
+            this.btnAgregarOrden.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarOrden.onHoverState.IconLeftImage = null;
+            this.btnAgregarOrden.onHoverState.IconRightImage = null;
+            this.btnAgregarOrden.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.OnIdleState.BorderRadius = 6;
+            this.btnAgregarOrden.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAgregarOrden.OnIdleState.BorderThickness = 1;
+            this.btnAgregarOrden.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarOrden.OnIdleState.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarOrden.OnIdleState.IconLeftImage")));
+            this.btnAgregarOrden.OnIdleState.IconRightImage = null;
+            this.btnAgregarOrden.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.OnPressedState.BorderRadius = 6;
+            this.btnAgregarOrden.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnAgregarOrden.OnPressedState.BorderThickness = 1;
+            this.btnAgregarOrden.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnAgregarOrden.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarOrden.OnPressedState.IconLeftImage = null;
+            this.btnAgregarOrden.OnPressedState.IconRightImage = null;
+            this.btnAgregarOrden.Size = new System.Drawing.Size(170, 36);
+            this.btnAgregarOrden.TabIndex = 24;
+            this.btnAgregarOrden.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarOrden.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAgregarOrden.TextMarginLeft = 0;
+            this.btnAgregarOrden.TextPadding = new System.Windows.Forms.Padding(0, 1, 8, 0);
+            this.btnAgregarOrden.UseDefaultRadiusAndThickness = true;
+            this.btnAgregarOrden.Click += new System.EventHandler(this.btnAgregarOrden_Click);
             // 
             // iconPictureBox1
             // 
@@ -318,24 +319,24 @@
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // dgvMesas
+            // dgvOrdenes
             // 
-            this.dgvMesas.AllowCustomTheming = true;
-            this.dgvMesas.AllowUserToAddRows = false;
-            this.dgvMesas.AllowUserToDeleteRows = false;
-            this.dgvMesas.AllowUserToResizeColumns = false;
-            this.dgvMesas.AllowUserToResizeRows = false;
+            this.dgvOrdenes.AllowCustomTheming = true;
+            this.dgvOrdenes.AllowUserToAddRows = false;
+            this.dgvOrdenes.AllowUserToDeleteRows = false;
+            this.dgvOrdenes.AllowUserToResizeColumns = false;
+            this.dgvOrdenes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMesas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOrdenes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMesas.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMesas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvMesas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvMesas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOrdenes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvOrdenes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOrdenes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvOrdenes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins Medium", 12F);
@@ -343,33 +344,33 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMesas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMesas.ColumnHeadersHeight = 55;
-            this.dgvMesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOrdenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOrdenes.ColumnHeadersHeight = 55;
+            this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.orderID,
             this.tableID,
             this.EstadoImg,
             this.Estado,
             this.customers,
             this.editar});
-            this.dgvMesas.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Poppins", 12F);
-            this.dgvMesas.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.GridColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Poppins Medium", 12F);
-            this.dgvMesas.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.Name = null;
-            this.dgvMesas.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvMesas.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Poppins", 12F);
-            this.dgvMesas.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.dgvMesas.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Poppins", 12F);
+            this.dgvOrdenes.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.GridColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Poppins Medium", 12F);
+            this.dgvOrdenes.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.Name = null;
+            this.dgvOrdenes.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvOrdenes.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Poppins", 12F);
+            this.dgvOrdenes.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgvOrdenes.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Poppins", 12F);
@@ -377,23 +378,24 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMesas.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvMesas.EnableHeadersVisualStyles = false;
-            this.dgvMesas.GridColor = System.Drawing.Color.White;
-            this.dgvMesas.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dgvMesas.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvMesas.Location = new System.Drawing.Point(40, 268);
-            this.dgvMesas.MultiSelect = false;
-            this.dgvMesas.Name = "dgvMesas";
-            this.dgvMesas.ReadOnly = true;
-            this.dgvMesas.RowHeadersVisible = false;
-            this.dgvMesas.RowTemplate.Height = 60;
-            this.dgvMesas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvMesas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMesas.Size = new System.Drawing.Size(1018, 382);
-            this.dgvMesas.TabIndex = 42;
-            this.dgvMesas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvOrdenes.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOrdenes.EnableHeadersVisualStyles = false;
+            this.dgvOrdenes.GridColor = System.Drawing.Color.White;
+            this.dgvOrdenes.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvOrdenes.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvOrdenes.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvOrdenes.Location = new System.Drawing.Point(40, 268);
+            this.dgvOrdenes.MultiSelect = false;
+            this.dgvOrdenes.Name = "dgvOrdenes";
+            this.dgvOrdenes.ReadOnly = true;
+            this.dgvOrdenes.RowHeadersVisible = false;
+            this.dgvOrdenes.RowTemplate.Height = 60;
+            this.dgvOrdenes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvOrdenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOrdenes.Size = new System.Drawing.Size(1018, 382);
+            this.dgvOrdenes.TabIndex = 42;
+            this.dgvOrdenes.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenes_CellContentClick);
             // 
             // orderID
             // 
@@ -423,6 +425,7 @@
             // 
             // Estado
             // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
             this.Estado.FillWeight = 67.70091F;
@@ -430,6 +433,7 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Estado.Width = 175;
             // 
             // customers
             // 
@@ -459,31 +463,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 699);
-            this.Controls.Add(this.dgvMesas);
+            this.Controls.Add(this.dgvOrdenes);
             this.Controls.Add(this.cbFiltro);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel10);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.txtFiltrar);
-            this.Controls.Add(this.btnAgregarMesa);
+            this.Controls.Add(this.btnAgregarOrden);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ordenes";
             this.Text = "Ordenes";
+            this.Load += new System.EventHandler(this.Ordenes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarMesa;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarOrden;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.UI.WinForms.BunifuTextBox txtFiltrar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         public Bunifu.UI.WinForms.BunifuDropdown cbFiltro;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private Bunifu.UI.WinForms.BunifuDataGridView dgvMesas;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgvOrdenes;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderID;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableID;
         private System.Windows.Forms.DataGridViewImageColumn EstadoImg;
