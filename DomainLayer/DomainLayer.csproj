@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\CuentasModel.cs" />
     <Compile Include="Models\DetalleOrdenModel.cs" />
     <Compile Include="Models\InicioModel.cs" />
     <Compile Include="Models\LoginUserModel.cs" />

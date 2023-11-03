@@ -21,25 +21,17 @@ namespace DomainLayer.Models
         }
 
         //Metodo que manda a insertar un registro y devuelve el id generado
-        public int inserOrder(string tableID, string state, string customers)
+        public int inserOrder()
         {
-            return ordenesDA.insertOrder(tableID, state, int.Parse(customers));
+            return ordenesDA.insertOrder();
         }
 
         //Metodo que obtiene el valor de un registro de las ordenes en especifico
         public DataTable getOrder(string orderID)
         {
             DataTable order = new DataTable();
-            order = ordenesDA.getOrder(int.Parse(orderID));
+            order = ordenesDA.getOrder(Convert.ToInt32(orderID));
             return order;
-        }
-
-        //Metodo que obtiene el valor de un registro de las ordenes por mesaID que no este cancelado o cerrado
-        public List<string> getTablesInOrders()
-        {
-            List<string> tableList = new List<string>();
-            tableList = ordenesDA.getTablesInOrders();
-            return tableList;
         }
 
         //Metodo que da formato a los datos y los manda a actualizar

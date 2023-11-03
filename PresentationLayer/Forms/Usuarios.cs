@@ -24,6 +24,7 @@ namespace FOOD
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
+            scrollbar1.BindTo(dgvUsuarios, false);
             showUsers();
         }
 

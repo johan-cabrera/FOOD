@@ -17,20 +17,14 @@ namespace DomainLayer.Models
         public int TotalCustomers { get; set; }
         public int TotalTables { get; set; }
         public DataTable GrossRevenueList { get; set; }
-        public DataTable TopProductList { get; set; }
 
         //Constructor
         public InicioModel() 
         {
             inicio = new InicioDA();
             GrossRevenueList = new DataTable();
-            TopProductList = new DataTable();
-
             GrossRevenueList.Columns.Add("Date", typeof(DateTime));
             GrossRevenueList.Columns.Add("Revenue", typeof (double));
-
-            TopProductList.Columns.Add("Dish", typeof(string));
-            TopProductList.Columns.Add("Quantity", typeof(int));
         }
 
         //Actualizar los valores del modelo
@@ -46,12 +40,6 @@ namespace DomainLayer.Models
             {
                 GrossRevenueList.Rows.Add(row.Date, row.Total);
             }
-
-            foreach(TopProducts row in inicio.TopProductsList)
-            {
-                TopProductList.Rows.Add(row.dish, row.quantity);
-            }
         }
-
     }
 }

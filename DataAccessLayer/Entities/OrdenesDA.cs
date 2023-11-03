@@ -22,7 +22,7 @@ namespace DataAccessLayer.Entities
                 using(SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "SELECT * FROM Ordenes ORDER BY OrdenID DESC";
+                    command.CommandText = "SELECT * FROM Ordenes";
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -34,7 +34,7 @@ namespace DataAccessLayer.Entities
         }
 
         //Metodo que inserta un registro a las ordenes
-        public int insertOrder(string TableID, string state, int customers)
+        public int insertOrder()
         {
             int orderId;
             using (SqlConnection conn = getConnection())
@@ -43,16 +43,14 @@ namespace DataAccessLayer.Entities
                 using(SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "INSERT INTO Ordenes (MesaID, Estado, CantidadClientes) VALUES (@tableID, @state, @customers); SELECT SCOPE_IDENTITY();";
+                    command.CommandText = "INSERT INTO Ordenes (MesaID, Estado, CantidadClientes) VALUES ('M00001', 'En Proceso', 0)";
 
-                    command.Parameters.AddWithValue("@tableID", TableID);
-                    command.Parameters.AddWithValue("@state", state);
-                    command.Parameters.AddWithValue("@customers", customers);
+                    command.ExecuteNonQuery();
 
+                    command.CommandText = "SELECT SCOPE_IDENTITY()";
                     orderId = Convert.ToInt32(command.ExecuteScalar());
                 }
             }
-
             return orderId;
         }
 
@@ -76,32 +74,6 @@ namespace DataAccessLayer.Entities
                     return ordenes;
                 }
             }
-        }
-
-        //Metodo que obtiene las mesas que tienen ordenes activas
-        public List<string> getTablesInOrders()
-        {
-            List<string> tableList = new List<string>();
-
-            using (SqlConnection conn = getConnection())
-            {
-                conn.Open();
-                using (SqlCommand command = new SqlCommand())
-                {
-                    command.Connection = conn;
-                    command.CommandText = "SELECT DISTINCT MesaID FROM Ordenes WHERE Estado IN ('En Proceso', 'Lista', 'Servida');";
-
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string mesaID = reader["MesaID"].ToString();
-                        tableList.Add(mesaID);
-                    }
-                }
-            }
-
-            return tableList;
         }
 
         public void updateOrder(int orderID, string tableID, string state, int quantity)

@@ -13,13 +13,8 @@ namespace FOOD
 {
     public partial class Inicio : Form
     {
-        List<double> barData = new List<double>();
-        string[] barLabels = new string[7];
-
-        List<double> donnutData = new List<double>();
-        string[] donnutLabels = new string[5];
-
-
+        List<double> data = new List<double>();
+        string[] labels = new string[7];
         public Inicio()
         {
             InitializeComponent();
@@ -42,44 +37,24 @@ namespace FOOD
             lblFechaActual.Text = Currentdate.ToString("dddd d 'de' MMMM 'de' yyyy").ToUpper();
 
             //Asignamos los datos a la grafica de barras
-            DataTable barTable = inicioModel.GrossRevenueList;
+            DataTable dt = inicioModel.GrossRevenueList;
 
             int index = 0;
-            foreach (DataRow row in barTable.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 DateTime date = (DateTime)row["Date"];
-                if (index < barLabels.Length) 
+                if (index < labels.Length) 
                 {
-                    barLabels[index] = date.ToString("dd MMM"); 
+                    labels[index] = date.ToString("dd MMM"); 
                 }
 
-                barData.Add(Convert.ToDouble(row["Revenue"]));
+                data.Add(Convert.ToDouble(row["Revenue"]));
 
                 index++;
             }
 
-            barChartGanacias.Data = barData;
-            chartGanancias.Labels = barLabels;
-
-            //Asignar datos a la grafica de dona
-            DataTable donnutTable = inicioModel.TopProductList;
-
-            index = 0;
-            foreach (DataRow row in donnutTable.Rows)
-            {
-                if(index < donnutLabels.Length)
-                {
-                    donnutLabels[index] = row["Dish"].ToString();
-                }
-
-                donnutData.Add(Convert.ToDouble(row["Quantity"]));
-
-                index++;
-            }
-
-            donnutChartPopulares.Data = donnutData;
-            chartPopulares.Labels = donnutLabels;
-
+            barChartGanacias.Data = data;
+            chartGanancias.Labels = labels;
         }
 
     }

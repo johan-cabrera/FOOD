@@ -62,8 +62,8 @@
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.donnutChartPopulares = new Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart(this.components);
             this.chartPopulares = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.donnutChartPopulares = new Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
@@ -88,7 +88,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 160);
+            this.panel1.Size = new System.Drawing.Size(980, 160);
             this.panel1.TabIndex = 4;
             // 
             // bunifuLabel10
@@ -142,7 +142,7 @@
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1282, 195);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(980, 195);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // bunifuPanel4
@@ -157,11 +157,11 @@
             this.bunifuPanel4.Controls.Add(this.lblMesas);
             this.bunifuPanel4.Controls.Add(this.bunifuLabel12);
             this.bunifuPanel4.Controls.Add(this.iconPictureBox4);
-            this.bunifuPanel4.Location = new System.Drawing.Point(975, 33);
+            this.bunifuPanel4.Location = new System.Drawing.Point(750, 33);
             this.bunifuPanel4.Margin = new System.Windows.Forms.Padding(20);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(277, 128);
+            this.bunifuPanel4.Size = new System.Drawing.Size(200, 128);
             this.bunifuPanel4.TabIndex = 7;
             // 
             // lblMesas
@@ -229,7 +229,7 @@
             this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(20);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(275, 128);
+            this.bunifuPanel3.Size = new System.Drawing.Size(200, 128);
             this.bunifuPanel3.TabIndex = 4;
             // 
             // bunifuLabel7
@@ -241,7 +241,7 @@
             this.bunifuLabel7.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel7.Font = new System.Drawing.Font("Poppins", 18F);
             this.bunifuLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(154)))), ((int)(((byte)(43)))));
-            this.bunifuLabel7.Location = new System.Drawing.Point(373, 71);
+            this.bunifuLabel7.Location = new System.Drawing.Point(298, 71);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel7.Size = new System.Drawing.Size(73, 42);
@@ -311,11 +311,11 @@
             this.bunifuPanel1.Controls.Add(this.lblVentas);
             this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
             this.bunifuPanel1.Controls.Add(this.iconPictureBox1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(345, 33);
+            this.bunifuPanel1.Location = new System.Drawing.Point(270, 33);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(20);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(275, 128);
+            this.bunifuPanel1.Size = new System.Drawing.Size(200, 128);
             this.bunifuPanel1.TabIndex = 5;
             // 
             // bunifuLabel1
@@ -327,7 +327,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Poppins", 18F);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(154)))), ((int)(((byte)(43)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(373, 71);
+            this.bunifuLabel1.Location = new System.Drawing.Point(298, 71);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(66, 42);
@@ -397,11 +397,11 @@
             this.bunifuPanel2.Controls.Add(this.lblClientes);
             this.bunifuPanel2.Controls.Add(this.bunifuLabel6);
             this.bunifuPanel2.Controls.Add(this.iconPictureBox2);
-            this.bunifuPanel2.Location = new System.Drawing.Point(660, 33);
+            this.bunifuPanel2.Location = new System.Drawing.Point(510, 33);
             this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(20);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(275, 128);
+            this.bunifuPanel2.Size = new System.Drawing.Size(200, 128);
             this.bunifuPanel2.TabIndex = 6;
             // 
             // bunifuLabel4
@@ -413,7 +413,7 @@
             this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel4.Font = new System.Drawing.Font("Poppins", 18F);
             this.bunifuLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(154)))), ((int)(((byte)(43)))));
-            this.bunifuLabel4.Location = new System.Drawing.Point(373, 71);
+            this.bunifuLabel4.Location = new System.Drawing.Point(298, 71);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(67, 42);
@@ -494,7 +494,14 @@
             this.chartGanancias.CanvasPadding = new System.Windows.Forms.Padding(0);
             this.chartGanancias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chartGanancias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(208)))), ((int)(((byte)(214)))));
-            this.chartGanancias.Labels = new string[0];
+            this.chartGanancias.Labels = new string[] {
+        "13 de Sep",
+        "14 de Sep",
+        "15 de Sep",
+        "16 de Sep",
+        "17 de Sep",
+        "18 de Sep",
+        "Hoy"};
             this.chartGanancias.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.chartGanancias.LegendDisplay = false;
             this.chartGanancias.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -508,7 +515,7 @@
             this.chartGanancias.Name = "chartGanancias";
             this.chartGanancias.ShowXAxis = true;
             this.chartGanancias.ShowYAxis = true;
-            this.chartGanancias.Size = new System.Drawing.Size(581, 204);
+            this.chartGanancias.Size = new System.Drawing.Size(430, 139);
             this.chartGanancias.TabIndex = 6;
             this.chartGanancias.Title = "";
             this.chartGanancias.TitleLineHeight = 1.2D;
@@ -559,7 +566,7 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1282, 109);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(980, 109);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // panel3
@@ -568,7 +575,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(18, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(620, 73);
+            this.panel3.Size = new System.Drawing.Size(469, 73);
             this.panel3.TabIndex = 0;
             // 
             // bunifuLabel13
@@ -592,9 +599,9 @@
             // 
             this.panel4.Controls.Add(this.bunifuLabel14);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(644, 18);
+            this.panel4.Location = new System.Drawing.Point(493, 18);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(620, 73);
+            this.panel4.Size = new System.Drawing.Size(469, 73);
             this.panel4.TabIndex = 1;
             // 
             // bunifuLabel14
@@ -619,14 +626,14 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.chartGanancias, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 464);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1282, 264);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(980, 199);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // panel2
@@ -635,22 +642,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.chartPopulares);
-            this.panel2.Location = new System.Drawing.Point(644, 3);
+            this.panel2.Location = new System.Drawing.Point(493, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(635, 258);
+            this.panel2.Size = new System.Drawing.Size(484, 193);
             this.panel2.TabIndex = 7;
-            // 
-            // donnutChartPopulares
-            // 
-            this.donnutChartPopulares.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BackgroundColor")));
-            this.donnutChartPopulares.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BorderColor")));
-            this.donnutChartPopulares.BorderWidth = 0;
-            this.donnutChartPopulares.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("donnutChartPopulares.Data")));
-            this.donnutChartPopulares.HoverBackgroundColor = System.Drawing.Color.Empty;
-            this.donnutChartPopulares.HoverBorderColor = System.Drawing.Color.Empty;
-            this.donnutChartPopulares.HoverBorderWidth = 0;
-            this.donnutChartPopulares.Label = "label here";
-            this.donnutChartPopulares.TargetCanvas = this.chartPopulares;
             // 
             // chartPopulares
             // 
@@ -661,7 +656,12 @@
             this.chartPopulares.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.chartPopulares.BackColor = System.Drawing.Color.White;
             this.chartPopulares.CanvasPadding = new System.Windows.Forms.Padding(0);
-            this.chartPopulares.Labels = new string[0];
+            this.chartPopulares.Labels = new string[] {
+        "Hamburguesa con papas",
+        "Coca Cola",
+        "Papa Horneada",
+        "Carne Asada",
+        "Pollo Frito"};
             this.chartPopulares.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
             this.chartPopulares.LegendDisplay = true;
             this.chartPopulares.LegendFont = new System.Drawing.Font("Poppins", 14F);
@@ -674,7 +674,7 @@
             this.chartPopulares.Name = "chartPopulares";
             this.chartPopulares.ShowXAxis = true;
             this.chartPopulares.ShowYAxis = true;
-            this.chartPopulares.Size = new System.Drawing.Size(629, 246);
+            this.chartPopulares.Size = new System.Drawing.Size(478, 181);
             this.chartPopulares.TabIndex = 0;
             this.chartPopulares.Title = "";
             this.chartPopulares.TitleLineHeight = 1.2D;
@@ -712,12 +712,24 @@
             this.chartPopulares.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartPopulares.YAxesZeroLineWidth = 1;
             // 
+            // donnutChartPopulares
+            // 
+            this.donnutChartPopulares.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BackgroundColor")));
+            this.donnutChartPopulares.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BorderColor")));
+            this.donnutChartPopulares.BorderWidth = 0;
+            this.donnutChartPopulares.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("donnutChartPopulares.Data")));
+            this.donnutChartPopulares.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.donnutChartPopulares.HoverBorderColor = System.Drawing.Color.Empty;
+            this.donnutChartPopulares.HoverBorderWidth = 0;
+            this.donnutChartPopulares.Label = "label here";
+            this.donnutChartPopulares.TargetCanvas = this.chartPopulares;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1282, 728);
+            this.ClientSize = new System.Drawing.Size(980, 663);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -780,12 +792,12 @@
         private Bunifu.Charts.WinForms.BunifuChartCanvas chartGanancias;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart donnutChartPopulares;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas chartPopulares;
         private Bunifu.UI.WinForms.BunifuLabel lblFechaActual;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
-        private Bunifu.Charts.WinForms.BunifuChartCanvas chartPopulares;
     }
 }
