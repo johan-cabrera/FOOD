@@ -325,6 +325,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CuentasP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CuentasP.Designer.cs">
+      <DependentUpon>CuentasP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CuentasCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CuentasCU.Designer.cs">
+      <DependentUpon>CuentasCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cuentas.Designer.cs">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +411,15 @@
     <Compile Include="Forms\UsuariosCU.Designer.cs">
       <DependentUpon>UsuariosCU.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\CuentasP.resx">
+      <DependentUpon>CuentasP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CuentasCU.resx">
+      <DependentUpon>CuentasCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cuentas.resx">
+      <DependentUpon>Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

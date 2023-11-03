@@ -13,8 +13,13 @@ namespace FOOD
 {
     public partial class Inicio : Form
     {
-        List<double> data = new List<double>();
-        string[] labels = new string[7];
+        List<double> barData = new List<double>();
+        string[] barLabels = new string[7];
+
+        List<double> donnutData = new List<double>();
+        string[] donnutLabels = new string[5];
+
+
         public Inicio()
         {
             InitializeComponent();
@@ -37,24 +42,44 @@ namespace FOOD
             lblFechaActual.Text = Currentdate.ToString("dddd d 'de' MMMM 'de' yyyy").ToUpper();
 
             //Asignamos los datos a la grafica de barras
-            DataTable dt = inicioModel.GrossRevenueList;
+            DataTable barTable = inicioModel.GrossRevenueList;
 
             int index = 0;
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in barTable.Rows)
             {
                 DateTime date = (DateTime)row["Date"];
-                if (index < labels.Length) 
+                if (index < barLabels.Length) 
                 {
-                    labels[index] = date.ToString("dd MMM"); 
+                    barLabels[index] = date.ToString("dd MMM"); 
                 }
 
-                data.Add(Convert.ToDouble(row["Revenue"]));
+                barData.Add(Convert.ToDouble(row["Revenue"]));
 
                 index++;
             }
 
-            barChartGanacias.Data = data;
-            chartGanancias.Labels = labels;
+            barChartGanacias.Data = barData;
+            chartGanancias.Labels = barLabels;
+
+            //Asignar datos a la grafica de dona
+            DataTable donnutTable = inicioModel.TopProductList;
+
+            index = 0;
+            foreach (DataRow row in donnutTable.Rows)
+            {
+                if(index < donnutLabels.Length)
+                {
+                    donnutLabels[index] = row["Dish"].ToString();
+                }
+
+                donnutData.Add(Convert.ToDouble(row["Quantity"]));
+
+                index++;
+            }
+
+            donnutChartPopulares.Data = donnutData;
+            chartPopulares.Labels = donnutLabels;
+
         }
 
     }
