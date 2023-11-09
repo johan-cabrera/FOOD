@@ -42,7 +42,7 @@ namespace DataAccessLayer.Entities
                 using(SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "INSERT INTO Usuarios VALUES (@id, @name, @lastname, @email, @phone, @rol, @password, @creationDate, @birthDate, @image)";
+                    command.CommandText = "INSERT INTO Usuarios VALUES (@id, @name, @lastname, @email, @phone, @rol, @password, @creationDate, @image, @birthDate)";
 
                     command.Parameters.AddWithValue("@id", userID);
                     command.Parameters.AddWithValue("@name", name);

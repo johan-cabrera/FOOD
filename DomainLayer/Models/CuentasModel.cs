@@ -30,11 +30,7 @@ namespace DomainLayer.Models
         //Metodo que da formato a los datos y los manda a insertar
         public void insertBill(string orderID, DateTime date, string subtotal, string tip, string discount, string total)
         {
-            DataTable order = ordenesDA.getOrder(int.Parse(orderID));
-            DataRow row = order.Rows[0];
-
             cuentasDA.insertBill(int.Parse(orderID), date, double.Parse(subtotal), double.Parse(tip), double.Parse(discount), double.Parse(total));
-            ordenesDA.updateOrder(int.Parse(orderID), row["MesaID"].ToString(), "Cerrada", int.Parse(row["CantidadClientes"].ToString()));
         }
 
         //Metodo que obtiene el valor de un registro de las ordenes por mesaID que no este cancelado o cerrado
@@ -59,9 +55,19 @@ namespace DomainLayer.Models
             return bill;
         }
 
-        public void updateBill(string billID)
+        public void updateBill(string billID, string orderID, string state)
         {
-            cuentasDA.updateBill(int.Parse(billID));
+            DataTable order = ordenesDA.getOrder(int.Parse(orderID));
+            DataRow row = order.Rows[0];
+            cuentasDA.updateBill(int.Parse(billID), state);
+            if(state == "Cancelado") ordenesDA.updateOrder(int.Parse(orderID), row["MesaID"].ToString(), "Cerrada", int.Parse(row["CantidadClientes"].ToString()));
+        }
+
+        public DataTable receiptBill(string orderID)
+        {
+            DataTable receipt = new DataTable();
+            receipt = cuentasDA.receiptBill(int.Parse(orderID));
+            return receipt;
         }
     }
 }

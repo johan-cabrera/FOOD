@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lblFechaActual = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblMesas = new Bunifu.UI.WinForms.BunifuLabel();
@@ -62,8 +62,10 @@
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.donnutChartPopulares = new Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart(this.components);
             this.chartPopulares = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.donnutChartPopulares = new Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
@@ -83,12 +85,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Controls.Add(this.bunifuLabel10);
-            this.panel1.Controls.Add(this.lblFechaActual);
+            this.panel1.Controls.Add(this.lblHora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1282, 160);
+            this.panel1.Size = new System.Drawing.Size(1282, 170);
             this.panel1.TabIndex = 4;
             // 
             // bunifuLabel10
@@ -108,22 +111,22 @@
             this.bunifuLabel10.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel10.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblFechaActual
+            // lblHora
             // 
-            this.lblFechaActual.AllowParentOverrides = false;
-            this.lblFechaActual.AutoEllipsis = false;
-            this.lblFechaActual.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblFechaActual.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblFechaActual.Font = new System.Drawing.Font("Poppins Light", 18F);
-            this.lblFechaActual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblFechaActual.Location = new System.Drawing.Point(30, 103);
-            this.lblFechaActual.Name = "lblFechaActual";
-            this.lblFechaActual.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFechaActual.Size = new System.Drawing.Size(73, 42);
-            this.lblFechaActual.TabIndex = 1;
-            this.lblFechaActual.Text = "Fecha";
-            this.lblFechaActual.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblFechaActual.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblHora.AllowParentOverrides = false;
+            this.lblHora.AutoEllipsis = false;
+            this.lblHora.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblHora.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblHora.Font = new System.Drawing.Font("Poppins Medium", 15.75F);
+            this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblHora.Location = new System.Drawing.Point(30, 94);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblHora.Size = new System.Drawing.Size(50, 37);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "Hora";
+            this.lblHora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblHora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // tableLayoutPanel2
             // 
@@ -137,7 +140,7 @@
             this.tableLayoutPanel2.Controls.Add(this.bunifuPanel1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.bunifuPanel2, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 160);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 170);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.Padding = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel2.RowCount = 1;
@@ -508,7 +511,7 @@
             this.chartGanancias.Name = "chartGanancias";
             this.chartGanancias.ShowXAxis = true;
             this.chartGanancias.ShowYAxis = true;
-            this.chartGanancias.Size = new System.Drawing.Size(581, 204);
+            this.chartGanancias.Size = new System.Drawing.Size(581, 194);
             this.chartGanancias.TabIndex = 6;
             this.chartGanancias.Title = "";
             this.chartGanancias.TitleLineHeight = 1.2D;
@@ -554,7 +557,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 355);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 365);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.tableLayoutPanel1.RowCount = 1;
@@ -622,11 +625,11 @@
             this.tableLayoutPanel3.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.chartGanancias, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 464);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 474);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1282, 264);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1282, 254);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
             // panel2
@@ -637,27 +640,15 @@
             this.panel2.Controls.Add(this.chartPopulares);
             this.panel2.Location = new System.Drawing.Point(644, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(635, 258);
+            this.panel2.Size = new System.Drawing.Size(635, 248);
             this.panel2.TabIndex = 7;
-            // 
-            // donnutChartPopulares
-            // 
-            this.donnutChartPopulares.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BackgroundColor")));
-            this.donnutChartPopulares.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BorderColor")));
-            this.donnutChartPopulares.BorderWidth = 0;
-            this.donnutChartPopulares.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("donnutChartPopulares.Data")));
-            this.donnutChartPopulares.HoverBackgroundColor = System.Drawing.Color.Empty;
-            this.donnutChartPopulares.HoverBorderColor = System.Drawing.Color.Empty;
-            this.donnutChartPopulares.HoverBorderWidth = 0;
-            this.donnutChartPopulares.Label = "label here";
-            this.donnutChartPopulares.TargetCanvas = this.chartPopulares;
             // 
             // chartPopulares
             // 
             this.chartPopulares.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chartPopulares.AnimationDuration = 1000;
+            this.chartPopulares.AnimationDuration = 1500;
             this.chartPopulares.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
             this.chartPopulares.BackColor = System.Drawing.Color.White;
             this.chartPopulares.CanvasPadding = new System.Windows.Forms.Padding(0);
@@ -674,7 +665,7 @@
             this.chartPopulares.Name = "chartPopulares";
             this.chartPopulares.ShowXAxis = true;
             this.chartPopulares.ShowYAxis = true;
-            this.chartPopulares.Size = new System.Drawing.Size(629, 246);
+            this.chartPopulares.Size = new System.Drawing.Size(629, 236);
             this.chartPopulares.TabIndex = 0;
             this.chartPopulares.Title = "";
             this.chartPopulares.TitleLineHeight = 1.2D;
@@ -711,6 +702,41 @@
             this.chartPopulares.YAxesStacked = false;
             this.chartPopulares.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.chartPopulares.YAxesZeroLineWidth = 1;
+            // 
+            // donnutChartPopulares
+            // 
+            this.donnutChartPopulares.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BackgroundColor")));
+            this.donnutChartPopulares.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("donnutChartPopulares.BorderColor")));
+            this.donnutChartPopulares.BorderWidth = 0;
+            this.donnutChartPopulares.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("donnutChartPopulares.Data")));
+            this.donnutChartPopulares.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.donnutChartPopulares.HoverBorderColor = System.Drawing.Color.Empty;
+            this.donnutChartPopulares.HoverBorderWidth = 0;
+            this.donnutChartPopulares.Label = "label here";
+            this.donnutChartPopulares.TargetCanvas = this.chartPopulares;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AllowParentOverrides = false;
+            this.lblFecha.AutoEllipsis = false;
+            this.lblFecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblFecha.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblFecha.Font = new System.Drawing.Font("Poppins Light", 14F);
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblFecha.Location = new System.Drawing.Point(30, 130);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblFecha.Size = new System.Drawing.Size(58, 34);
+            this.lblFecha.TabIndex = 3;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Inicio
             // 
@@ -780,12 +806,14 @@
         private Bunifu.Charts.WinForms.BunifuChartCanvas chartGanancias;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart donnutChartPopulares;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.UI.WinForms.BunifuLabel lblFechaActual;
+        private Bunifu.UI.WinForms.BunifuLabel lblHora;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel10;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel13;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
         private Bunifu.Charts.WinForms.BunifuChartCanvas chartPopulares;
+        private System.Windows.Forms.Timer timer1;
+        private Bunifu.UI.WinForms.BunifuLabel lblFecha;
     }
 }

@@ -14,8 +14,6 @@ namespace FOOD
 {
     public partial class CuentasCU : Form
     {
-        MesasModel mesasModel = new MesasModel();
-        OrdenesModel ordenesModel = new OrdenesModel();
         CuentasModel cuentasModel = new CuentasModel();
         public CuentasCU()
         {

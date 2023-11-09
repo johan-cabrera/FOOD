@@ -23,6 +23,7 @@ namespace FOOD
         public OrdenesCU()
         {
             InitializeComponent();
+            clearTxt();
         }
 
         //Importar metodos que permiten mover el formulario
@@ -76,7 +77,6 @@ namespace FOOD
             loadTables();
             loadDishes();
             showOrderDetails();
-            clearTxt();
         }
 
         //Metodo para llenar los combobox de mesas
@@ -150,6 +150,12 @@ namespace FOOD
             string orderID, dishName, quantity, comment;
             bool actionsuccess;
 
+            if(lblOrdenID.Text == "0")
+            {
+                MessageBox.Show("Debe crear una orden para poder asignar el detalle");
+                clearTxt();
+                return;
+            }
             if(txtPlatillo.Enabled == true)
             {
                 orderID = lblOrdenID.Text;

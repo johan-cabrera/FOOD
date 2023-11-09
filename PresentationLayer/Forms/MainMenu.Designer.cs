@@ -36,7 +36,6 @@
             this.lblRolUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombreUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReportes = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnCuentas = new FontAwesome.Sharp.IconButton();
             this.btnOrdenes = new FontAwesome.Sharp.IconButton();
@@ -62,7 +61,6 @@
             this.panelOpciones.BorderThickness = 1;
             this.panelOpciones.Controls.Add(this.bunifuPanel3);
             this.panelOpciones.Controls.Add(this.pictureBox1);
-            this.panelOpciones.Controls.Add(this.btnReportes);
             this.panelOpciones.Controls.Add(this.btnMenu);
             this.panelOpciones.Controls.Add(this.btnCuentas);
             this.panelOpciones.Controls.Add(this.btnOrdenes);
@@ -176,31 +174,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.BackColor = System.Drawing.Color.Transparent;
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Poppins Medium", 14F);
-            this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
-            this.btnReportes.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.btnReportes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
-            this.btnReportes.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnReportes.IconSize = 38;
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(3, 534);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(336, 59);
-            this.btnReportes.TabIndex = 12;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportes.UseVisualStyleBackColor = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnMenu
             // 
@@ -406,7 +379,6 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelContenedor;
-        private FontAwesome.Sharp.IconButton btnReportes;
         private FontAwesome.Sharp.IconButton iconButton9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;

@@ -25,6 +25,7 @@ namespace FOOD
             OrdenesCU createOrder = new OrdenesCU();
             createOrder.lblTitulo.Text = "Crear Orden";
             createOrder.txtClientes.Text = "0";
+            createOrder.cbEstado.SelectedIndex = 0;
             createOrder.FormClosed += updateDgv;
             createOrder.ShowDialog();
         }

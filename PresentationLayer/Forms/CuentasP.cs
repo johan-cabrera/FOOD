@@ -152,13 +152,13 @@ namespace FOOD
         {
             if(panelTarjeta.Visible && !string.IsNullOrEmpty(txtNumeroTarjeta.Text)) 
             {
-                cuentasModel.updateBill(lblBillID.Text);
+                cuentasModel.updateBill(lblBillID.Text, lblOrdenID.Text, "Cancelado");
                 MessageBox.Show("Cuenta cancelada");
                 this.Close();
             }
             else if (panelEfectivo.Visible && !string.IsNullOrEmpty(txtPago.Text))
             {
-                cuentasModel.updateBill(lblBillID.Text);
+                cuentasModel.updateBill(lblBillID.Text, lblOrdenID.Text, "Cancelado");
                 MessageBox.Show("Cuenta cancelada");
                 this.Close();
             }

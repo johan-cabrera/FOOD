@@ -83,6 +83,7 @@
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblBillID = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelTarjeta = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblOrdenID = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPago.SuspendLayout();
             this.panelEfectivo.SuspendLayout();
@@ -803,6 +804,7 @@
             this.panelPago.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.panelPago.BorderRadius = 8;
             this.panelPago.BorderThickness = 1;
+            this.panelPago.Controls.Add(this.lblOrdenID);
             this.panelPago.Controls.Add(this.panelEfectivo);
             this.panelPago.Controls.Add(this.lblTotal);
             this.panelPago.Controls.Add(this.bunifuLabel8);
@@ -1054,6 +1056,23 @@
             this.panelTarjeta.TabIndex = 77;
             this.panelTarjeta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTarjeta_MouseDown);
             // 
+            // lblOrdenID
+            // 
+            this.lblOrdenID.AllowParentOverrides = false;
+            this.lblOrdenID.AutoEllipsis = false;
+            this.lblOrdenID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblOrdenID.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblOrdenID.Font = new System.Drawing.Font("Poppins", 15F);
+            this.lblOrdenID.Location = new System.Drawing.Point(31, 55);
+            this.lblOrdenID.Name = "lblOrdenID";
+            this.lblOrdenID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblOrdenID.Size = new System.Drawing.Size(13, 36);
+            this.lblOrdenID.TabIndex = 82;
+            this.lblOrdenID.Text = "0";
+            this.lblOrdenID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblOrdenID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblOrdenID.Visible = false;
+            // 
             // CuentasP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1110,5 +1129,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuLabel lblCambio;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public Bunifu.UI.WinForms.BunifuLabel lblOrdenID;
     }
 }

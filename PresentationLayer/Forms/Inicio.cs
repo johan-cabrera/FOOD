@@ -1,5 +1,6 @@
 ﻿using DomainLayer.Models;
 using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,9 @@ namespace FOOD
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            //Actualizar fecha y hora
+            updateDate();
+
             //Instanciamos la capa de dominio
             InicioModel inicioModel = new InicioModel();
 
@@ -37,9 +41,6 @@ namespace FOOD
             lblVentas.Text = inicioModel.TotalSales.ToString();
             lblClientes.Text = inicioModel.TotalCustomers.ToString();
             lblMesas.Text = inicioModel.TotalTables.ToString();
-
-            DateTime Currentdate = DateTime.Now;
-            lblFechaActual.Text = Currentdate.ToString("dddd d 'de' MMMM 'de' yyyy").ToUpper();
 
             //Asignamos los datos a la grafica de barras
             DataTable barTable = inicioModel.GrossRevenueList;
@@ -82,5 +83,17 @@ namespace FOOD
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            updateDate();
+            
+        }
+
+        private void updateDate()
+        {
+            CultureInfo culture = new CultureInfo("en-US");
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt", culture);
+            lblFecha.Text = DateTime.Now.ToString("dddd dd 'de' MMMM 'del' yyyy");
+        }
     }
 }

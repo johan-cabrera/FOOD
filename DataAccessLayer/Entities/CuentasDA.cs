@@ -14,6 +14,7 @@ namespace DataAccessLayer.Entities
         DataTable bill = new DataTable();
         DataTable tables = new DataTable();
         DataTable ordenes = new DataTable();
+        DataTable receipt = new DataTable();
 
         //Metodo para obtener el sub total de la cuenta
         public double getSubTotal(int id)
@@ -144,7 +145,7 @@ namespace DataAccessLayer.Entities
         }
 
         //Metodo que actualiza el estado de una cuenta
-        public void updateBill(int billID)
+        public void updateBill(int billID, string state)
         {
             using (SqlConnection conn = getConnection())
             {
@@ -152,12 +153,36 @@ namespace DataAccessLayer.Entities
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "UPDATE Cuentas SET EstadoPago = 'Cancelado' WHERE CuentaID = @billId";
+                    command.CommandText = "UPDATE Cuentas SET EstadoPago = @state WHERE CuentaID = @billId";
 
                     command.Parameters.AddWithValue("@billId", billID);
+                    command.Parameters.AddWithValue("@state", state);
 
 
                     command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        //Metodo para retornar detalles del recibo
+        public DataTable receiptBill(int orderID)
+        {
+            using (SqlConnection conn = getConnection())
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand())
+                {
+                    command.Connection = conn;
+                    command.CommandText = "SELECT M.NombrePlatillo, DO.Cantidad, (DO.PrecioUnitario * DO.Cantidad) AS Precio FROM DetalleOrden DO INNER JOIN Menu M ON M.PlatilloID = DO.PlatilloID WHERE OrdenID = @orderID";
+
+                    command.Parameters.AddWithValue("@orderId", orderID);
+
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    receipt.Clear();
+                    receipt.Load(reader);
+                    return receipt;
                 }
             }
         }

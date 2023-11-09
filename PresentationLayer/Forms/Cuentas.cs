@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace FOOD
 {
@@ -15,6 +18,8 @@ namespace FOOD
     {
         CuentasModel cuentasModel = new CuentasModel();
         OrdenesModel ordenesModel = new OrdenesModel();
+        DataTable receipt;
+        DataTable bill;
         public Cuentas()
         {
             InitializeComponent();
@@ -69,6 +74,7 @@ namespace FOOD
 
             string colName = dgvCuentas.Columns[e.ColumnIndex].Name;
             string billID = dgvCuentas.Rows[e.RowIndex].Cells["billID"].Value.ToString();
+            string orderID = dgvCuentas.Rows[e.RowIndex].Cells["order"].Value.ToString();
             string amount = dgvCuentas.Rows[e.RowIndex].Cells["total"].Value.ToString();
             string state = dgvCuentas.Rows[e.RowIndex].Cells["Estado"].Value.ToString();
 
@@ -106,17 +112,43 @@ namespace FOOD
 
             else if(colName == "pagar")
             {
-                if(state == "Cancelado")
+                if(state == "Cancelado" || state == "Descartada")
                 {
-                    MessageBox.Show("La cuenta ya fue cancelada");
+                    MessageBox.Show("Solo se pueden cancelar cuentas pendientes");
                     return;
                 }
                 CuentasP payBill = new CuentasP();
                 payBill.lblBillID.Text = billID.PadLeft(6, '0');
                 payBill.lblBillID.Visible = true;
                 payBill.lblTotal.Text = $"{amount}";
+                payBill.lblOrdenID.Text = orderID;
                 payBill.FormClosed += updateDgv;
                 payBill.ShowDialog();
+            }
+
+            else if(colName == "imprimir")
+            {
+
+
+                receipt = cuentasModel.receiptBill(orderID);
+                bill = cuentasModel.getBill(billID);
+
+                
+
+                pdRecibo.Print();
+                ppdRecibo.Document = pdRecibo;
+                ppdRecibo.ShowDialog();
+            }
+
+            else if(colName == "descartar")
+            {
+                DialogResult result = MessageBox.Show($"¿Esta seguro de que desea descartar la cuenta {billID}?", "Descartar cuenta", MessageBoxButtons.OKCancel);
+                if(result == DialogResult.OK)
+                {
+                    cuentasModel.updateBill(billID, orderID, "Descartada");
+                    showBills();
+                }
+                
             }
         }
 
@@ -183,6 +215,60 @@ namespace FOOD
             }
 
             dgvCuentas.ResumeLayout();
+        }
+
+        private void pdRecibo_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            DataRow billRow = bill.Rows[0];
+
+            string billID = billRow[0].ToString().PadLeft(6, '0');
+            string date = Convert.ToDateTime(billRow[2]).ToString("dd/MM/yyyy");
+            string subtotal = $"${billRow[3]}".PadLeft(6);
+            string tip = $"${billRow[4]}".PadLeft(6);
+            string discount = $"${billRow[5]}".PadLeft(6);
+            string total = $"${billRow[6]}".PadLeft(6);
+
+            string receiptString;
+
+            receiptString =   "  Food Orders Optimizer Dispatcher\n";
+            receiptString +=  "        18 79, HIGH HOUSE RD\n";
+            receiptString +=  "        NEW HILL, NC, 27513\n";
+            receiptString +=  "         (503) 6192 - 1660\n\n";
+            receiptString += $"ORDEN: {billID}".PadRight(26) + $"{date}";
+
+            Font font = new Font("Courier New", 10, FontStyle.Regular, GraphicsUnit.Point);
+
+            e.Graphics.DrawString(receiptString, font, Brushes.Black, 10, 50);
+
+            int x = 10;
+            int y = 160;
+            foreach (DataRow row in receipt.Rows)
+            {
+                string cantidad = row[1].ToString().Substring(0, Math.Min(row[1].ToString().Length, 5)).PadRight(2);
+                string producto = row[0].ToString().Substring(0, Math.Min(row[0].ToString().Length, 20)).ToUpper();
+                string precio = $"${row[2]}".PadLeft(6);
+
+                string filaRecibo = $"{cantidad}{producto}\n";
+
+                e.Graphics.DrawString(filaRecibo, font, Brushes.Black, x, y);
+                e.Graphics.DrawString(precio, font, Brushes.Black, x + 260, y);
+
+                y += 20;
+            }
+
+            e.Graphics.DrawString("SUBTOTAL:", font, Brushes.Black, x, y += 20);
+            e.Graphics.DrawString(subtotal, font, Brushes.Black, x + 260, y);
+
+            e.Graphics.DrawString("PROPINA:", font, Brushes.Black, x, y += 20);
+            e.Graphics.DrawString(tip, font, Brushes.Black, x + 260, y);
+
+            e.Graphics.DrawString("DESCUENTO:", font, Brushes.Black, x, y += 20);
+            e.Graphics.DrawString(discount, font, Brushes.Black, x + 260, y);
+
+            e.Graphics.DrawString("TOTAL:", font, Brushes.Black, x, y += 20);
+            e.Graphics.DrawString(total, font, Brushes.Black, x + 260, y);
+
+            pdRecibo.DefaultPageSettings.PaperSize = new PaperSize("Customsize", 350, y += 40);
         }
     }
 }
