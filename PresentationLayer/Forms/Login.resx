@@ -124,7 +124,7 @@
   <data name="lblError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAL5JREFUOE+lk4sRwyAIhh2lY6gMk27UUTqCyQSOkBE6QvqDpM0FyPWu3HE+4ANE
+        DwAACw8BkvkDpQAAAL5JREFUOE+lk4sRwyAIhh2lY6gMk27UUTqCyQSOkBE6QvqDpM0FyPWu3HE+4ANE
         TWdptd5nojbX+oJuMmK95Dypi5WW8w2OXQFfS1nZT5EhCq7G2dNzAGxGYFRJF1DO6DmU0iQwkRtAeqDN
         McYDHNsx2btqjVcwOIY9A6uc6wLe4sxDn87ersiM8hyDXMlCNGHu3wQfK+o2wIeUHWT/vDgswvt09qQq
         AVn+emEsPwboBjyK9GA08fursLa/KqU33w2I4qim4JAAAAAASUVORK5CYII=
@@ -151,14 +151,6 @@
         PSCK6AFRRA+IInpAFNEDoogeEEX0gCiiB0QRPSCK6AFRRA+IInpAFNEDoogeEEX0gCiiB0QRPSCK6AFR
         RA+IInpAFNEDoogeEEX0gCiiB0Qpu7H+tAYAPSrDdHhrDQC6M9bj+r09PAzT8tVcAOjE1rm5PpXLGfb1
         cb38/r8E0IM1eKebeXkupZRfTUdC/cpm1agAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALAAAAAZCAYAAACRpKR4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABsSURBVHhe7dwxDQAxEAPB8Kf4MNJfXpFCYqWZygC29pqZ
-        70DQbXe9DUkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApAmYNAGT
-        JmDSBEza/YXYb0PKzOwfccN+0YlR7gkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txtPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

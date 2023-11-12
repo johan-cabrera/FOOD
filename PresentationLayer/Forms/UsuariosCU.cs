@@ -69,6 +69,12 @@ namespace FOOD
             confirmpass = txtConfirmarContraseña.Text;
             birthdate = dpFechaNacimiento.Text;
 
+            if(!validate())
+            {
+                ShowError("Error: Tiene que completar todos los datos del usuario");
+                return;
+            }
+
             if(confirmpass == pass)
             {
                 if(action == "Crear usuario")
@@ -115,6 +121,23 @@ namespace FOOD
         {
             if (String.IsNullOrEmpty(txtConfirmarContraseña.Text)) txtConfirmarContraseña.UseSystemPasswordChar = false;
             else txtConfirmarContraseña.UseSystemPasswordChar = true;
+        }
+
+        private bool validate()
+        {
+            bool validation = true;
+
+            if(string.IsNullOrEmpty(txtNombres.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtApellidos.Text)) validation = false;
+            if (string.IsNullOrEmpty(cbRoles.Text)) validation = false;
+            if (string.IsNullOrEmpty(dpFechaNacimiento.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtNombres.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtTelefono.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtCorreo.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtContraseña.Text)) validation = false;
+            if (string.IsNullOrEmpty(txtConfirmarContraseña.Text)) validation = false;
+
+            return validation;
         }
     }
 }

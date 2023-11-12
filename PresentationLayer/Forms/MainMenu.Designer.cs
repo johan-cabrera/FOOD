@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.panelOpciones = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panelSalir = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarApp = new FontAwesome.Sharp.IconButton();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pbFotoPerfil = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
+            this.btnOpciones = new FontAwesome.Sharp.IconButton();
             this.lblRolUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblNombreUsuario = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelOpciones.SuspendLayout();
+            this.panelSalir.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +63,7 @@
             this.panelOpciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(212)))), ((int)(((byte)(219)))));
             this.panelOpciones.BorderRadius = 0;
             this.panelOpciones.BorderThickness = 1;
+            this.panelOpciones.Controls.Add(this.panelSalir);
             this.panelOpciones.Controls.Add(this.bunifuPanel3);
             this.panelOpciones.Controls.Add(this.pictureBox1);
             this.panelOpciones.Controls.Add(this.btnMenu);
@@ -74,6 +79,76 @@
             this.panelOpciones.Size = new System.Drawing.Size(340, 739);
             this.panelOpciones.TabIndex = 1;
             // 
+            // panelSalir
+            // 
+            this.panelSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelSalir.BackgroundColor = System.Drawing.Color.Transparent;
+            this.panelSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelSalir.BackgroundImage")));
+            this.panelSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelSalir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(212)))), ((int)(((byte)(219)))));
+            this.panelSalir.BorderRadius = 6;
+            this.panelSalir.BorderThickness = 1;
+            this.panelSalir.Controls.Add(this.btnCerrarSesion);
+            this.panelSalir.Controls.Add(this.btnCerrarApp);
+            this.panelSalir.Location = new System.Drawing.Point(127, 509);
+            this.panelSalir.Name = "panelSalir";
+            this.panelSalir.ShowBorders = true;
+            this.panelSalir.Size = new System.Drawing.Size(207, 100);
+            this.panelSalir.TabIndex = 0;
+            this.panelSalir.Visible = false;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Poppins Medium", 12F);
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.Tomato;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCerrarSesion.IconSize = 30;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 50);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(207, 50);
+            this.btnCerrarSesion.TabIndex = 13;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnCerrarApp
+            // 
+            this.btnCerrarApp.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarApp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarApp.FlatAppearance.BorderSize = 0;
+            this.btnCerrarApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCerrarApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnCerrarApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarApp.Font = new System.Drawing.Font("Poppins Medium", 12F);
+            this.btnCerrarApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnCerrarApp.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnCerrarApp.IconColor = System.Drawing.Color.Tomato;
+            this.btnCerrarApp.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCerrarApp.IconSize = 30;
+            this.btnCerrarApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarApp.Location = new System.Drawing.Point(0, 0);
+            this.btnCerrarApp.Name = "btnCerrarApp";
+            this.btnCerrarApp.Padding = new System.Windows.Forms.Padding(10);
+            this.btnCerrarApp.Size = new System.Drawing.Size(207, 50);
+            this.btnCerrarApp.TabIndex = 12;
+            this.btnCerrarApp.Text = "Salir al escritorio";
+            this.btnCerrarApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarApp.UseVisualStyleBackColor = false;
+            this.btnCerrarApp.Click += new System.EventHandler(this.btnCerrarApp_Click);
+            // 
             // bunifuPanel3
             // 
             this.bunifuPanel3.BackgroundColor = System.Drawing.Color.Transparent;
@@ -83,7 +158,7 @@
             this.bunifuPanel3.BorderRadius = 0;
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.pbFotoPerfil);
-            this.bunifuPanel3.Controls.Add(this.iconButton9);
+            this.bunifuPanel3.Controls.Add(this.btnOpciones);
             this.bunifuPanel3.Controls.Add(this.lblRolUsuario);
             this.bunifuPanel3.Controls.Add(this.lblNombreUsuario);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -109,27 +184,28 @@
             this.pbFotoPerfil.TabStop = false;
             this.pbFotoPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // iconButton9
+            // btnOpciones
             // 
-            this.iconButton9.BackColor = System.Drawing.Color.Transparent;
-            this.iconButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton9.FlatAppearance.BorderSize = 0;
-            this.iconButton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.iconButton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Font = new System.Drawing.Font("Poppins Medium", 14F);
-            this.iconButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
-            this.iconButton9.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconButton9.IconSize = 27;
-            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(283, 52);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Size = new System.Drawing.Size(35, 28);
-            this.iconButton9.TabIndex = 13;
-            this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton9.UseVisualStyleBackColor = false;
+            this.btnOpciones.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpciones.FlatAppearance.BorderSize = 0;
+            this.btnOpciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOpciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOpciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpciones.Font = new System.Drawing.Font("Poppins Medium", 14F);
+            this.btnOpciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
+            this.btnOpciones.IconChar = FontAwesome.Sharp.IconChar.EllipsisVertical;
+            this.btnOpciones.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnOpciones.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnOpciones.IconSize = 27;
+            this.btnOpciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpciones.Location = new System.Drawing.Point(283, 52);
+            this.btnOpciones.Name = "btnOpciones";
+            this.btnOpciones.Size = new System.Drawing.Size(35, 28);
+            this.btnOpciones.TabIndex = 13;
+            this.btnOpciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOpciones.UseVisualStyleBackColor = false;
+            this.btnOpciones.Click += new System.EventHandler(this.btnOpciones_Click);
             // 
             // lblRolUsuario
             // 
@@ -357,6 +433,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.panelOpciones.ResumeLayout(false);
+            this.panelSalir.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFotoPerfil)).EndInit();
@@ -379,9 +456,12 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelContenedor;
-        private FontAwesome.Sharp.IconButton iconButton9;
+        private FontAwesome.Sharp.IconButton btnOpciones;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Bunifu.UI.WinForms.BunifuPictureBox pbFotoPerfil;
+        private Bunifu.UI.WinForms.BunifuPanel panelSalir;
+        private FontAwesome.Sharp.IconButton btnCerrarApp;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
     }
 }

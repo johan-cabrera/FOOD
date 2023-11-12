@@ -116,6 +116,11 @@ namespace FOOD
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            if(AttributesUser.Rol == "Mesero")
+            {
+                MessageBox.Show("Solo administradores pueden acceder a la gestion de usuarios.");
+                return;
+            }
             activateBtn(sender);
             openChildForm(new Usuarios());
         }
@@ -149,6 +154,20 @@ namespace FOOD
             activateBtn(sender);
         }
 
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void btnCerrarApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOpciones_Click(object sender, EventArgs e)
+        {
+            if(panelSalir.Visible == true) panelSalir.Visible = false;
+            else panelSalir.Visible = true;
+        }
     }
 }
