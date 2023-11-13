@@ -549,7 +549,7 @@
             this.dgvDetalleOrden.EnableHeadersVisualStyles = false;
             this.dgvDetalleOrden.GridColor = System.Drawing.Color.White;
             this.dgvDetalleOrden.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvDetalleOrden.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvDetalleOrden.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvDetalleOrden.HeaderForeColor = System.Drawing.Color.White;
             this.dgvDetalleOrden.Location = new System.Drawing.Point(34, 271);
             this.dgvDetalleOrden.MultiSelect = false;

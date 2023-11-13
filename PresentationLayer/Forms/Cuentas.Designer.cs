@@ -32,27 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbFiltro = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvCuentas = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAgregarCuenta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.txtFiltro = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.pdRecibo = new System.Drawing.Printing.PrintDocument();
-            this.ppdRecibo = new System.Windows.Forms.PrintPreviewDialog();
             this.billID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.order = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoImg = new System.Windows.Forms.DataGridViewImageColumn();
@@ -63,6 +56,13 @@
             this.pagar = new System.Windows.Forms.DataGridViewImageColumn();
             this.imprimir = new System.Windows.Forms.DataGridViewImageColumn();
             this.descartar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAgregarCuenta = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.txtFiltro = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pdRecibo = new System.Drawing.Printing.PrintDocument();
+            this.ppdRecibo = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -178,7 +178,7 @@
             this.dgvCuentas.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.dgvCuentas.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.dgvCuentas.CurrentTheme.GridColor = System.Drawing.Color.White;
-            this.dgvCuentas.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvCuentas.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Empty;
             this.dgvCuentas.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Poppins Medium", 12F);
             this.dgvCuentas.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvCuentas.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
@@ -199,7 +199,7 @@
             this.dgvCuentas.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvCuentas.EnableHeadersVisualStyles = false;
             this.dgvCuentas.GridColor = System.Drawing.Color.White;
-            this.dgvCuentas.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvCuentas.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvCuentas.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvCuentas.HeaderForeColor = System.Drawing.Color.White;
             this.dgvCuentas.Location = new System.Drawing.Point(40, 268);
@@ -214,6 +214,118 @@
             this.dgvCuentas.TabIndex = 45;
             this.dgvCuentas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvCuentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuentas_CellContentClick);
+            // 
+            // billID
+            // 
+            this.billID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.billID.FillWeight = 130.779F;
+            this.billID.Frozen = true;
+            this.billID.HeaderText = "ID";
+            this.billID.Name = "billID";
+            this.billID.ReadOnly = true;
+            this.billID.Width = 200;
+            // 
+            // order
+            // 
+            this.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.order.FillWeight = 123.0994F;
+            this.order.Frozen = true;
+            this.order.HeaderText = "Orden";
+            this.order.Name = "order";
+            this.order.ReadOnly = true;
+            this.order.Width = 150;
+            // 
+            // EstadoImg
+            // 
+            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EstadoImg.HeaderText = "";
+            this.EstadoImg.Name = "EstadoImg";
+            this.EstadoImg.ReadOnly = true;
+            this.EstadoImg.Width = 50;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Estado.FillWeight = 67.70091F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Estado.Width = 150;
+            // 
+            // total
+            // 
+            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 150;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Fecha";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // ver
+            // 
+            this.ver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.ver.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ver.FillWeight = 60.9137F;
+            this.ver.HeaderText = "";
+            this.ver.Image = ((System.Drawing.Image)(resources.GetObject("ver.Image")));
+            this.ver.MinimumWidth = 30;
+            this.ver.Name = "ver";
+            this.ver.ReadOnly = true;
+            this.ver.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ver.Width = 30;
+            // 
+            // pagar
+            // 
+            this.pagar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.pagar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.pagar.HeaderText = "";
+            this.pagar.Image = ((System.Drawing.Image)(resources.GetObject("pagar.Image")));
+            this.pagar.MinimumWidth = 30;
+            this.pagar.Name = "pagar";
+            this.pagar.ReadOnly = true;
+            this.pagar.Width = 30;
+            // 
+            // imprimir
+            // 
+            this.imprimir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.imprimir.DefaultCellStyle = dataGridViewCellStyle6;
+            this.imprimir.HeaderText = "";
+            this.imprimir.Image = ((System.Drawing.Image)(resources.GetObject("imprimir.Image")));
+            this.imprimir.MinimumWidth = 30;
+            this.imprimir.Name = "imprimir";
+            this.imprimir.ReadOnly = true;
+            this.imprimir.Width = 30;
+            // 
+            // descartar
+            // 
+            this.descartar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.descartar.DefaultCellStyle = dataGridViewCellStyle7;
+            this.descartar.HeaderText = "";
+            this.descartar.Image = ((System.Drawing.Image)(resources.GetObject("descartar.Image")));
+            this.descartar.MinimumWidth = 30;
+            this.descartar.Name = "descartar";
+            this.descartar.ReadOnly = true;
+            this.descartar.Width = 30;
             // 
             // bunifuLabel10
             // 
@@ -441,118 +553,6 @@
             this.ppdRecibo.Icon = ((System.Drawing.Icon)(resources.GetObject("ppdRecibo.Icon")));
             this.ppdRecibo.Name = "ppdRecibo";
             this.ppdRecibo.Visible = false;
-            // 
-            // billID
-            // 
-            this.billID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.billID.FillWeight = 130.779F;
-            this.billID.Frozen = true;
-            this.billID.HeaderText = "ID";
-            this.billID.Name = "billID";
-            this.billID.ReadOnly = true;
-            this.billID.Width = 150;
-            // 
-            // order
-            // 
-            this.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.order.FillWeight = 123.0994F;
-            this.order.Frozen = true;
-            this.order.HeaderText = "Orden";
-            this.order.Name = "order";
-            this.order.ReadOnly = true;
-            this.order.Width = 150;
-            // 
-            // EstadoImg
-            // 
-            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EstadoImg.HeaderText = "";
-            this.EstadoImg.Name = "EstadoImg";
-            this.EstadoImg.ReadOnly = true;
-            this.EstadoImg.Width = 50;
-            // 
-            // Estado
-            // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Estado.FillWeight = 67.70091F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Estado.Width = 150;
-            // 
-            // total
-            // 
-            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 150;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Fecha";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // ver
-            // 
-            this.ver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.ver.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ver.FillWeight = 60.9137F;
-            this.ver.HeaderText = "";
-            this.ver.Image = ((System.Drawing.Image)(resources.GetObject("ver.Image")));
-            this.ver.MinimumWidth = 30;
-            this.ver.Name = "ver";
-            this.ver.ReadOnly = true;
-            this.ver.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ver.Width = 30;
-            // 
-            // pagar
-            // 
-            this.pagar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.pagar.DefaultCellStyle = dataGridViewCellStyle5;
-            this.pagar.HeaderText = "";
-            this.pagar.Image = ((System.Drawing.Image)(resources.GetObject("pagar.Image")));
-            this.pagar.MinimumWidth = 30;
-            this.pagar.Name = "pagar";
-            this.pagar.ReadOnly = true;
-            this.pagar.Width = 30;
-            // 
-            // imprimir
-            // 
-            this.imprimir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.imprimir.DefaultCellStyle = dataGridViewCellStyle6;
-            this.imprimir.HeaderText = "";
-            this.imprimir.Image = ((System.Drawing.Image)(resources.GetObject("imprimir.Image")));
-            this.imprimir.MinimumWidth = 30;
-            this.imprimir.Name = "imprimir";
-            this.imprimir.ReadOnly = true;
-            this.imprimir.Width = 30;
-            // 
-            // descartar
-            // 
-            this.descartar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.descartar.DefaultCellStyle = dataGridViewCellStyle7;
-            this.descartar.HeaderText = "";
-            this.descartar.Image = ((System.Drawing.Image)(resources.GetObject("descartar.Image")));
-            this.descartar.MinimumWidth = 30;
-            this.descartar.Name = "descartar";
-            this.descartar.ReadOnly = true;
-            this.descartar.Width = 30;
             // 
             // Cuentas
             // 

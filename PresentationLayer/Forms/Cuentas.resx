@@ -194,7 +194,7 @@
   <data name="pagar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAJFJREFUOE9jEJDWMuAX1z7PL671n0J8X0BU1YABxECTIB+LaZ0HGYhdkkzMwCuq
+        DAAACwwBP0AiyAAAAJFJREFUOE9jEJDWMuAX1z7PL671n0J8X0BU1YABxECTIB+LaZ0HGYhdkkzMwCuq
         HU9NzDD4gYCEVgI1MfUjBZsgJXiIGcgnplHPIaApD8J84tr9wJT/HsZHxviyKroLgdlQcz8Ea7+HiMH4
         yBhFDwqmvpcFxLQXYJMgB/OJac2HJG5RjQQgp54iLK6Zz8DAwAAA3pg81L08E/AAAAAASUVORK5CYII=
 </value>
@@ -222,7 +222,7 @@
   <data name="imprimir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAYAAABSx2cSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAANVJREFUOE9j4BfXus8vpnVeQEJDgQEIBMS1JoDEBMQ0A8B8IM0vrv2eT1y7H8wH
+        DAAACwwBP0AiyAAAANVJREFUOE9j4BfXus8vpnVeQEJDgQEIBMS1JoDEBMQ0A8B8IM0vrv2eT1y7H8wH
         qgPy94PUgDT/h+L7UEEY/z/Q0PUofHFNsCYYH1kzyXjQaNbczyemNR8XRg8TFM284lr+oNDEicV0gSGP
         QzOpmHqa+US1+3lFteNxYaC/65HVo2gWkNBqAOIEnBiS+rBrJhVTTzMoqjgENOVxYZA8sno0mylIJKTi
         waEZszAQJ1wYADma+0EJH1TMgIoboCHvBcTUkIohrfug1AfmA9UB5c/zi2vdBwCIWVSNMiJKSgAAAABJ
@@ -252,7 +252,7 @@
   <data name="descartar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAThJREFUOE+dVMtxwyAQpQFJewF5JhdfkrHh4lLcgd1J0kHSQUpQKS5BJaiEeB+Q
+        DwAACw8BkvkDpQAAAThJREFUOE+dVMtxwyAQpQFJewF5JhdfkrHh4lLcgd1J0kHSQUpQKS5BJaiEeB+Q
         gKwVwnkzb8Qs7NN+YJUEoj3Rzl47Y4eutyPzx9PYG2zNzl3i0W2QOZ673k1/IuscN4Wpt1+CY5GcyUd0
         nwMbkkMN2959RpkAXy/h4DNEqaKcUmxIhf8vjZ3QzEJ0bmqN/Z43SLIlNpqbxAtcjcUmHBE9vdhTEHAT
         1rAF0aVPZ44DC7qbvMkp6FcvAKFfsfQDwYdLhwiljcBMFNgQ8ywLZmkCtYIrHU5i+Obpr4ry06xvSpZ+

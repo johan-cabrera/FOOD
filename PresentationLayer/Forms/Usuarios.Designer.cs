@@ -147,7 +147,7 @@
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
             this.dgvUsuarios.GridColor = System.Drawing.Color.White;
             this.dgvUsuarios.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvUsuarios.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvUsuarios.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvUsuarios.HeaderForeColor = System.Drawing.Color.White;
             this.dgvUsuarios.Location = new System.Drawing.Point(40, 268);
             this.dgvUsuarios.MultiSelect = false;

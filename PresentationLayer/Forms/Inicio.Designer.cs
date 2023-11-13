@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblHora = new Bunifu.UI.WinForms.BunifuLabel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,7 +66,6 @@
             this.chartPopulares = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.donnutChartPopulares = new Bunifu.Charts.WinForms.ChartTypes.BunifuDoughnutChart(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblFecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.bunifuPanel4.SuspendLayout();
@@ -93,6 +93,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1282, 170);
             this.panel1.TabIndex = 4;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AllowParentOverrides = false;
+            this.lblFecha.AutoEllipsis = false;
+            this.lblFecha.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblFecha.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblFecha.Font = new System.Drawing.Font("Poppins Light", 14F);
+            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblFecha.Location = new System.Drawing.Point(30, 130);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblFecha.Size = new System.Drawing.Size(58, 34);
+            this.lblFecha.TabIndex = 3;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel10
             // 
@@ -720,23 +737,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AllowParentOverrides = false;
-            this.lblFecha.AutoEllipsis = false;
-            this.lblFecha.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblFecha.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblFecha.Font = new System.Drawing.Font("Poppins Light", 14F);
-            this.lblFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblFecha.Location = new System.Drawing.Point(30, 130);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFecha.Size = new System.Drawing.Size(58, 34);
-            this.lblFecha.TabIndex = 3;
-            this.lblFecha.Text = "Fecha";
-            this.lblFecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // Inicio
             // 

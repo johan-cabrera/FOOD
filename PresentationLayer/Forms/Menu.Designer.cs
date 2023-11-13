@@ -32,28 +32,28 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuLabel10 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvMenu = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.dishID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoImg = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregarPlatillo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtFiltrar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.cbFiltro = new Bunifu.UI.WinForms.BunifuDropdown();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.dishID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoImg = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -116,7 +116,7 @@
             this.dgvMenu.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.dgvMenu.CurrentTheme.BackColor = System.Drawing.Color.White;
             this.dgvMenu.CurrentTheme.GridColor = System.Drawing.Color.White;
-            this.dgvMenu.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvMenu.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Empty;
             this.dgvMenu.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Poppins Medium", 12F);
             this.dgvMenu.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvMenu.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
@@ -137,7 +137,7 @@
             this.dgvMenu.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.GridColor = System.Drawing.Color.White;
-            this.dgvMenu.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dgvMenu.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvMenu.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvMenu.HeaderForeColor = System.Drawing.Color.White;
             this.dgvMenu.Location = new System.Drawing.Point(40, 268);
@@ -152,68 +152,6 @@
             this.dgvMenu.TabIndex = 24;
             this.dgvMenu.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
-            // 
-            // dishID
-            // 
-            this.dishID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dishID.FillWeight = 130.779F;
-            this.dishID.Frozen = true;
-            this.dishID.HeaderText = "ID";
-            this.dishID.Name = "dishID";
-            this.dishID.ReadOnly = true;
-            this.dishID.Width = 150;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.name.FillWeight = 123.0994F;
-            this.name.Frozen = true;
-            this.name.HeaderText = "Platillo";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 250;
-            // 
-            // price
-            // 
-            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.price.HeaderText = "Precio";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 200;
-            // 
-            // EstadoImg
-            // 
-            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.EstadoImg.HeaderText = "";
-            this.EstadoImg.Name = "EstadoImg";
-            this.EstadoImg.ReadOnly = true;
-            this.EstadoImg.Width = 50;
-            // 
-            // Estado
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Estado.FillWeight = 67.70091F;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // editar
-            // 
-            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.editar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.editar.FillWeight = 60.9137F;
-            this.editar.HeaderText = "";
-            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
-            this.editar.MinimumWidth = 30;
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.Width = 30;
             // 
             // dataGridViewImageColumn1
             // 
@@ -477,6 +415,68 @@
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // dishID
+            // 
+            this.dishID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dishID.FillWeight = 130.779F;
+            this.dishID.Frozen = true;
+            this.dishID.HeaderText = "ID";
+            this.dishID.Name = "dishID";
+            this.dishID.ReadOnly = true;
+            this.dishID.Width = 200;
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.name.FillWeight = 123.0994F;
+            this.name.Frozen = true;
+            this.name.HeaderText = "Platillo";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 250;
+            // 
+            // price
+            // 
+            this.price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            this.price.Width = 200;
+            // 
+            // EstadoImg
+            // 
+            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EstadoImg.HeaderText = "";
+            this.EstadoImg.Name = "EstadoImg";
+            this.EstadoImg.ReadOnly = true;
+            this.EstadoImg.Width = 50;
+            // 
+            // Estado
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Estado.FillWeight = 67.70091F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // editar
+            // 
+            this.editar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.editar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.editar.FillWeight = 60.9137F;
+            this.editar.HeaderText = "";
+            this.editar.Image = ((System.Drawing.Image)(resources.GetObject("editar.Image")));
+            this.editar.MinimumWidth = 30;
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.Width = 30;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,15 +507,15 @@
         private Bunifu.UI.WinForms.BunifuDataGridView dgvMenu;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarPlatillo;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtFiltrar;
+        public Bunifu.UI.WinForms.BunifuDropdown cbFiltro;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dishID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewImageColumn EstadoImg;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewImageColumn editar;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private Bunifu.UI.WinForms.BunifuTextBox txtFiltrar;
-        public Bunifu.UI.WinForms.BunifuDropdown cbFiltro;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }

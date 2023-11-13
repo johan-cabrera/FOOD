@@ -10,7 +10,6 @@ namespace DataAccessLayer.Connection
 {
     public abstract class ConnectionSql
     {
-        private string server, db, user, pass;
         private readonly string connectionString;
 
         public ConnectionSql()

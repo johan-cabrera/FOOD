@@ -112,7 +112,7 @@
             this.dgvMesas.EnableHeadersVisualStyles = false;
             this.dgvMesas.GridColor = System.Drawing.Color.White;
             this.dgvMesas.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvMesas.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvMesas.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvMesas.HeaderForeColor = System.Drawing.Color.White;
             this.dgvMesas.Location = new System.Drawing.Point(40, 268);
             this.dgvMesas.MultiSelect = false;

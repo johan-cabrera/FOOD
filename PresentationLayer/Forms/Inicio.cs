@@ -49,12 +49,15 @@ namespace FOOD
             foreach (DataRow row in barTable.Rows)
             {
                 DateTime date = (DateTime)row["Date"];
+                double revenue = Convert.ToDouble(row["Revenue"]);
+
                 if (index < barLabels.Length) 
                 {
                     barLabels[index] = date.ToString("dd MMM"); 
                 }
 
-                barData.Add(Convert.ToDouble(row["Revenue"]));
+                if(revenue > 0) barData.Add(revenue);
+                else barData.Add(0);
 
                 index++;
             }
@@ -86,7 +89,6 @@ namespace FOOD
         private void timer1_Tick(object sender, EventArgs e)
         {
             updateDate();
-            
         }
 
         private void updateDate()

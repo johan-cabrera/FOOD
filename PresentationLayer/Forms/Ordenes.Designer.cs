@@ -389,7 +389,7 @@
             this.dgvOrdenes.EnableHeadersVisualStyles = false;
             this.dgvOrdenes.GridColor = System.Drawing.Color.White;
             this.dgvOrdenes.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.dgvOrdenes.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgvOrdenes.HeaderBackColor = System.Drawing.Color.Empty;
             this.dgvOrdenes.HeaderForeColor = System.Drawing.Color.White;
             this.dgvOrdenes.Location = new System.Drawing.Point(40, 268);
             this.dgvOrdenes.MultiSelect = false;
