@@ -22,7 +22,7 @@ namespace DataAccessLayer.Entities
                 using(SqlCommand command = new SqlCommand()) 
                 {
                     command.Connection = conn;
-                    command.CommandText = "SELECT * FROM Menu";
+                    command.CommandText = "SELECT * FROM Menu ORDER BY PlatilloID DESC";
 
                     SqlDataReader reader = command.ExecuteReader();
 

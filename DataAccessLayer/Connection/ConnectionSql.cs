@@ -15,12 +15,12 @@ namespace DataAccessLayer.Connection
 
         public ConnectionSql()
         {
-            server = "DESKTOP-BO18SDI";
-            db = "FOOD";
-            user = "sa";
-            pass = "12345";
+            server = "";
+            db = "";
+            user = "";
+            pass = "";
 
-            connectionString = "Server=" + server + ";uid=" + user + ";pwd=" + pass + ";database=" + db;
+            connectionString = "Data Source=Localhost;Initial Catalog=FOOD;Integrated Security=True";
         }
 
         protected SqlConnection getConnection()

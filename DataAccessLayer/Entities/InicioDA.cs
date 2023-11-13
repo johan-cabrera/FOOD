@@ -55,7 +55,7 @@ namespace DataAccessLayer.Entities
                     }
                     catch (Exception ex)
                     {
-
+                        Console.WriteLine(ex.ToString());
                     }
                 }
             }

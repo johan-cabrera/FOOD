@@ -428,6 +428,7 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(-1, -1);
             this.Name = "MainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
