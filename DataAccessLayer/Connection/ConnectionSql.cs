@@ -14,11 +14,14 @@ namespace DataAccessLayer.Connection
 
         public ConnectionSql()
         {
+<<<<<<< HEAD
             server = "";
             db = "";
             user = "";
             pass = "";
 
+=======
+>>>>>>> actualizacion final
             connectionString = "Data Source=Localhost;Initial Catalog=FOOD;Integrated Security=True";
         }
 

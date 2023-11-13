@@ -11,7 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtility", "CommonUtil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{EFBC2806-4673-4956-96ED-49860F67D5BD}"
 EndProject
+<<<<<<< HEAD
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FOOD", "FOOD\FOOD.vdproj", "{27636505-E37D-4629-A63F-A7FBF788EE92}"
+=======
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{EDD0A92A-E600-4759-913C-2C8928CCACFE}"
+>>>>>>> actualizacion final
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +39,13 @@ Global
 		{EFBC2806-4673-4956-96ED-49860F67D5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFBC2806-4673-4956-96ED-49860F67D5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFBC2806-4673-4956-96ED-49860F67D5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{27636505-E37D-4629-A63F-A7FBF788EE92}.Debug|Any CPU.ActiveCfg = Debug
 		{27636505-E37D-4629-A63F-A7FBF788EE92}.Release|Any CPU.ActiveCfg = Release
+=======
+		{EDD0A92A-E600-4759-913C-2C8928CCACFE}.Debug|Any CPU.ActiveCfg = Debug
+		{EDD0A92A-E600-4759-913C-2C8928CCACFE}.Release|Any CPU.ActiveCfg = Release
+>>>>>>> actualizacion final
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
