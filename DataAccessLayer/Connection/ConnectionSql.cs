@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace DataAccessLayer.Connection
 {
@@ -14,20 +15,12 @@ namespace DataAccessLayer.Connection
 
         public ConnectionSql()
         {
-<<<<<<< HEAD
-            server = "";
-            db = "";
-            user = "";
-            pass = "";
-
-=======
->>>>>>> actualizacion final
-            connectionString = "Data Source=Localhost;Initial Catalog=FOOD;Integrated Security=True";
+            connectionString = "Host=db-food-6233.g8z.cockroachlabs.cloud;Port=26257;Database=food;Username=food;Password=gSLGWJO-1JApvNLuhb09HQ;SslMode=Require;TrustServerCertificate=true";
         }
 
-        protected SqlConnection getConnection()
+        protected NpgsqlConnection getConnection()
         {
-            return new SqlConnection(connectionString);
+            return new NpgsqlConnection(connectionString);
         }
     }
 }

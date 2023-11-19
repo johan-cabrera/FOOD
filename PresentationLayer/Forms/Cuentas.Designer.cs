@@ -554,6 +554,118 @@
             this.ppdRecibo.Name = "ppdRecibo";
             this.ppdRecibo.Visible = false;
             // 
+            // billID
+            // 
+            this.billID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.billID.FillWeight = 130.779F;
+            this.billID.Frozen = true;
+            this.billID.HeaderText = "ID";
+            this.billID.Name = "billID";
+            this.billID.ReadOnly = true;
+            this.billID.Width = 200;
+            // 
+            // order
+            // 
+            this.order.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.order.FillWeight = 123.0994F;
+            this.order.Frozen = true;
+            this.order.HeaderText = "Orden";
+            this.order.Name = "order";
+            this.order.ReadOnly = true;
+            this.order.Width = 150;
+            // 
+            // EstadoImg
+            // 
+            this.EstadoImg.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.EstadoImg.HeaderText = "";
+            this.EstadoImg.Name = "EstadoImg";
+            this.EstadoImg.ReadOnly = true;
+            this.EstadoImg.Width = 50;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Estado.FillWeight = 67.70091F;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Estado.Width = 150;
+            // 
+            // total
+            // 
+            this.total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 150;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Fecha";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // ver
+            // 
+            this.ver.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.ver.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ver.FillWeight = 60.9137F;
+            this.ver.HeaderText = "";
+            this.ver.Image = ((System.Drawing.Image)(resources.GetObject("ver.Image")));
+            this.ver.MinimumWidth = 30;
+            this.ver.Name = "ver";
+            this.ver.ReadOnly = true;
+            this.ver.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ver.Width = 30;
+            // 
+            // pagar
+            // 
+            this.pagar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.pagar.DefaultCellStyle = dataGridViewCellStyle5;
+            this.pagar.HeaderText = "";
+            this.pagar.Image = ((System.Drawing.Image)(resources.GetObject("pagar.Image")));
+            this.pagar.MinimumWidth = 30;
+            this.pagar.Name = "pagar";
+            this.pagar.ReadOnly = true;
+            this.pagar.Width = 30;
+            // 
+            // imprimir
+            // 
+            this.imprimir.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.imprimir.DefaultCellStyle = dataGridViewCellStyle6;
+            this.imprimir.HeaderText = "";
+            this.imprimir.Image = ((System.Drawing.Image)(resources.GetObject("imprimir.Image")));
+            this.imprimir.MinimumWidth = 30;
+            this.imprimir.Name = "imprimir";
+            this.imprimir.ReadOnly = true;
+            this.imprimir.Width = 30;
+            // 
+            // descartar
+            // 
+            this.descartar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
+            this.descartar.DefaultCellStyle = dataGridViewCellStyle7;
+            this.descartar.HeaderText = "";
+            this.descartar.Image = ((System.Drawing.Image)(resources.GetObject("descartar.Image")));
+            this.descartar.MinimumWidth = 30;
+            this.descartar.Name = "descartar";
+            this.descartar.ReadOnly = true;
+            this.descartar.Width = 30;
+            // 
             // Cuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

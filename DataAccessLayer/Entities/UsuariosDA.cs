@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Connection;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,15 +17,15 @@ namespace DataAccessLayer.Entities
         //Metodo para obtener los datos de la tabla usuarios
         public DataTable showUsers()
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT UsuarioID, Nombres, Apellidos, Rol, Telefono, Correo FROM Usuarios";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     users.Clear();
                     users.Load(reader);
@@ -36,10 +37,10 @@ namespace DataAccessLayer.Entities
         //Metodo que inserta un nuevo usuario
         public void insertUser(string userID, string name, string lastname, string email, string phone, string rol, string password, DateTime creationDate, DateTime birthdate, Byte[] image)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "INSERT INTO Usuarios VALUES (@id, @name, @lastname, @email, @phone, @rol, @password, @creationDate, @birthDate, @image)";
@@ -52,7 +53,7 @@ namespace DataAccessLayer.Entities
                     command.Parameters.AddWithValue("@rol", rol);
                     command.Parameters.AddWithValue("@password", password);
                     command.Parameters.AddWithValue("@creationdate", creationDate);
-                    command.Parameters.AddWithValue("@birthdate", birthdate);
+                    command.Parameters.AddWithValue("@birthdate", birthdate.Date);
                     command.Parameters.AddWithValue("@image", image);
 
                     command.ExecuteNonQuery();
@@ -63,17 +64,17 @@ namespace DataAccessLayer.Entities
         //Metodo que obtiene los datos de un usuario en especifico
         public DataTable getUser(string userID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Usuarios Where UsuarioID = @userId";
 
                     command.Parameters.AddWithValue("@userId", userID);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     users.Clear();
                     users.Load(reader);
@@ -85,10 +86,10 @@ namespace DataAccessLayer.Entities
         //Metodo para actualizar los datos de un usuario
         public void updateUser(string userID, string name, string lastname, string email, string phone, string rol, string password, DateTime birthdate, Byte[] image)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "UPDATE Usuarios SET Nombres = @name, Apellidos = @lastname, Correo = @email, Telefono = @phone, Rol = @rol, Contraseña = @password, FechaNacimiento = @birthDate, Imagen = @image WHERE UsuarioID = @ID";
@@ -100,7 +101,7 @@ namespace DataAccessLayer.Entities
                     command.Parameters.AddWithValue("@phone", phone);
                     command.Parameters.AddWithValue("@rol", rol);
                     command.Parameters.AddWithValue("@password", password);
-                    command.Parameters.AddWithValue("@birthdate", birthdate);
+                    command.Parameters.AddWithValue("@birthdate", birthdate.Date);
                     command.Parameters.AddWithValue("@image", image);
 
                     command.ExecuteNonQuery();
@@ -111,10 +112,10 @@ namespace DataAccessLayer.Entities
         //Metodo para eliminar los datos de un usuario
         public void deleteUser(string userID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "DELETE FROM Usuarios WHERE UsuarioID = @ID";

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer.Connection;
+using Npgsql;
 
 namespace DataAccessLayer.Entities
 {
@@ -16,15 +17,15 @@ namespace DataAccessLayer.Entities
         //Metodo para obtener los datos de la tabla mesas
         public DataTable showTables()
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Mesas";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     tables.Clear();
                     tables.Load(reader);
@@ -36,10 +37,10 @@ namespace DataAccessLayer.Entities
         //Metodo que inseta una nueva mesa
         public void insertTable(string tableID, string capacity, string state)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "INSERT INTO Mesas VALUES (@id, @capacity, @state)";
@@ -56,17 +57,17 @@ namespace DataAccessLayer.Entities
         //Metodo que obtiene el valor de una mesa en especifico
         public DataTable getTable(string tableID)
         {
-            using(SqlConnection conn = getConnection())
+            using(NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using( SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Mesas WHERE MesaID = @mesaId";
 
                     command.Parameters.AddWithValue("@mesaId", tableID);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     tables.Clear();
                     tables.Load(reader);
@@ -78,10 +79,10 @@ namespace DataAccessLayer.Entities
         //Metodo que actualiza el valor de una mesa
         public void updateTable(string currentId, string tableID, string capacity, string state)
         {
-            using( SqlConnection conn = getConnection())
+            using(NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "UPDATE Mesas SET MesaID = @id, Capacidad = @capacity, Estado = @state WHERE MesaID = @currentId";

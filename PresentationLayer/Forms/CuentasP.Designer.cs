@@ -73,6 +73,7 @@
             this.rbTarjeta = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.lblTarjeta = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelPago = new Bunifu.UI.WinForms.BunifuPanel();
+            this.lblOrdenID = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelEfectivo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblCambio = new Bunifu.UI.WinForms.BunifuLabel();
@@ -83,7 +84,6 @@
             this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblBillID = new Bunifu.UI.WinForms.BunifuLabel();
             this.panelTarjeta = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblOrdenID = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPago.SuspendLayout();
             this.panelEfectivo.SuspendLayout();
@@ -825,6 +825,23 @@
             this.panelPago.TabIndex = 77;
             this.panelPago.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPago_MouseDown);
             // 
+            // lblOrdenID
+            // 
+            this.lblOrdenID.AllowParentOverrides = false;
+            this.lblOrdenID.AutoEllipsis = false;
+            this.lblOrdenID.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblOrdenID.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblOrdenID.Font = new System.Drawing.Font("Poppins", 15F);
+            this.lblOrdenID.Location = new System.Drawing.Point(360, 82);
+            this.lblOrdenID.Name = "lblOrdenID";
+            this.lblOrdenID.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblOrdenID.Size = new System.Drawing.Size(13, 36);
+            this.lblOrdenID.TabIndex = 82;
+            this.lblOrdenID.Text = "0";
+            this.lblOrdenID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblOrdenID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblOrdenID.Visible = false;
+            // 
             // panelEfectivo
             // 
             this.panelEfectivo.BackgroundColor = System.Drawing.Color.Transparent;
@@ -986,12 +1003,12 @@
             this.lblTotal.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblTotal.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblTotal.Font = new System.Drawing.Font("Poppins", 15F);
-            this.lblTotal.Location = new System.Drawing.Point(292, 28);
+            this.lblTotal.Location = new System.Drawing.Point(32, 50);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotal.Size = new System.Drawing.Size(13, 36);
+            this.lblTotal.Size = new System.Drawing.Size(68, 36);
             this.lblTotal.TabIndex = 80;
-            this.lblTotal.Text = "0";
+            this.lblTotal.Text = "$00.00";
             this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1003,7 +1020,7 @@
             this.bunifuLabel8.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel8.Font = new System.Drawing.Font("Poppins SemiBold", 14F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.bunifuLabel8.Location = new System.Drawing.Point(31, 25);
+            this.bunifuLabel8.Location = new System.Drawing.Point(31, 16);
             this.bunifuLabel8.Name = "bunifuLabel8";
             this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel8.Size = new System.Drawing.Size(78, 34);
@@ -1019,12 +1036,12 @@
             this.lblBillID.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblBillID.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblBillID.Font = new System.Drawing.Font("Poppins", 12F);
-            this.lblBillID.Location = new System.Drawing.Point(117, 29);
+            this.lblBillID.Location = new System.Drawing.Point(117, 20);
             this.lblBillID.Name = "lblBillID";
             this.lblBillID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBillID.Size = new System.Drawing.Size(10, 28);
+            this.lblBillID.Size = new System.Drawing.Size(180, 28);
             this.lblBillID.TabIndex = 78;
-            this.lblBillID.Text = "0";
+            this.lblBillID.Text = "000000000000000000";
             this.lblBillID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblBillID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblBillID.Visible = false;
@@ -1055,23 +1072,6 @@
             this.panelTarjeta.Size = new System.Drawing.Size(371, 401);
             this.panelTarjeta.TabIndex = 77;
             this.panelTarjeta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTarjeta_MouseDown);
-            // 
-            // lblOrdenID
-            // 
-            this.lblOrdenID.AllowParentOverrides = false;
-            this.lblOrdenID.AutoEllipsis = false;
-            this.lblOrdenID.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblOrdenID.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOrdenID.Font = new System.Drawing.Font("Poppins", 15F);
-            this.lblOrdenID.Location = new System.Drawing.Point(31, 55);
-            this.lblOrdenID.Name = "lblOrdenID";
-            this.lblOrdenID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOrdenID.Size = new System.Drawing.Size(13, 36);
-            this.lblOrdenID.TabIndex = 82;
-            this.lblOrdenID.Text = "0";
-            this.lblOrdenID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblOrdenID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lblOrdenID.Visible = false;
             // 
             // CuentasP
             // 

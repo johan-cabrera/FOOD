@@ -17,7 +17,7 @@ namespace DomainLayer.Models
         public DataTable showOrderDetails(string orderID)
         {
             DataTable orderDetails = new DataTable();
-            orderDetails = detalleordenDA.showOrderDetails(int.Parse(orderID));
+            orderDetails = detalleordenDA.showOrderDetails(long.Parse(orderID));
             return orderDetails;
         }
 
@@ -25,16 +25,17 @@ namespace DomainLayer.Models
         public bool insertOrderDetail(string orderID, string dish, string quantityS, string comment)
         { 
             bool validate;
-            int quantity, dishID;
+            int quantity;
+            long dishID;
             double unitPrice;
 
             DataTable dishValues = new DataTable();
-            dishValues = menuDA.getMenu("", dish);
+            dishValues = menuDA.getMenu(0, dish);
             if(dishValues.Rows.Count != 0)
             {
                 DataRow row = dishValues.Rows[0];
 
-                dishID = int.Parse(row["PlatilloID"].ToString());
+                dishID = long.Parse(row["PlatilloID"].ToString());
                 unitPrice = double.Parse(row["Precio"].ToString());
 
                 if (string.IsNullOrEmpty(comment)) comment = " - ";
@@ -43,7 +44,7 @@ namespace DomainLayer.Models
                 validate = int.TryParse(quantityS, out quantity);
                 if (validate)
                 {
-                    detalleordenDA.insertOrderDetail(int.Parse(orderID), dishID, quantity, unitPrice, comment);
+                    detalleordenDA.insertOrderDetail(long.Parse(orderID), dishID, quantity, unitPrice, comment);
                     return true;
                 }
                 else
@@ -59,7 +60,7 @@ namespace DomainLayer.Models
         //Metodo que elimina un registro de la tabla detalle orden
         public void deleteOrderDetail(string orderDetailID)
         {
-            detalleordenDA.deleteOrderDetail(int.Parse(orderDetailID));
+            detalleordenDA.deleteOrderDetail(long.Parse(orderDetailID));
         }
     }
 }

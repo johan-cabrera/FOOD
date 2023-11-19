@@ -543,13 +543,13 @@
             this.lblOrdenID.AutoEllipsis = false;
             this.lblOrdenID.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblOrdenID.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblOrdenID.Font = new System.Drawing.Font("Poppins", 11F);
-            this.lblOrdenID.Location = new System.Drawing.Point(229, 144);
+            this.lblOrdenID.Font = new System.Drawing.Font("Poppins", 10F);
+            this.lblOrdenID.Location = new System.Drawing.Point(229, 149);
             this.lblOrdenID.Name = "lblOrdenID";
             this.lblOrdenID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblOrdenID.Size = new System.Drawing.Size(48, 26);
+            this.lblOrdenID.Size = new System.Drawing.Size(14, 23);
             this.lblOrdenID.TabIndex = 45;
-            this.lblOrdenID.Text = "------";
+            this.lblOrdenID.Text = "--";
             this.lblOrdenID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblOrdenID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -638,13 +638,13 @@
             this.lblBillID.AutoEllipsis = false;
             this.lblBillID.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblBillID.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblBillID.Font = new System.Drawing.Font("Poppins", 16F);
-            this.lblBillID.Location = new System.Drawing.Point(311, 33);
+            this.lblBillID.Font = new System.Drawing.Font("Poppins", 12F);
+            this.lblBillID.Location = new System.Drawing.Point(203, 38);
             this.lblBillID.Name = "lblBillID";
             this.lblBillID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBillID.Size = new System.Drawing.Size(72, 37);
+            this.lblBillID.Size = new System.Drawing.Size(180, 28);
             this.lblBillID.TabIndex = 41;
-            this.lblBillID.Text = "000001";
+            this.lblBillID.Text = "000000000000000000";
             this.lblBillID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblBillID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblBillID.Visible = false;

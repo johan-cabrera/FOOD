@@ -616,12 +616,12 @@
             this.lblPlatilloID.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblPlatilloID.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPlatilloID.Font = new System.Drawing.Font("Poppins", 16F);
-            this.lblPlatilloID.Location = new System.Drawing.Point(425, 23);
+            this.lblPlatilloID.Location = new System.Drawing.Point(270, 26);
             this.lblPlatilloID.Name = "lblPlatilloID";
             this.lblPlatilloID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPlatilloID.Size = new System.Drawing.Size(20, 37);
+            this.lblPlatilloID.Size = new System.Drawing.Size(234, 37);
             this.lblPlatilloID.TabIndex = 41;
-            this.lblPlatilloID.Text = "ID";
+            this.lblPlatilloID.Text = "000000000000000000";
             this.lblPlatilloID.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPlatilloID.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lblPlatilloID.Visible = false;

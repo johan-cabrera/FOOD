@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace DataAccessLayer.Entities
 {
@@ -16,15 +17,15 @@ namespace DataAccessLayer.Entities
         //Metodo para obtener los datos de la tabla ordenes
         public DataTable showOrders()
         {
-            using(SqlConnection conn = getConnection())
+            using(NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Ordenes ORDER BY OrdenID DESC";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     ordenes.Clear();
                     ordenes.Load(reader);
@@ -34,22 +35,23 @@ namespace DataAccessLayer.Entities
         }
 
         //Metodo que inserta un registro a las ordenes
-        public int insertOrder(string TableID, string state, int customers)
+        public long insertOrder(string TableID, string state, int customers)
         {
-            int orderId;
-            using (SqlConnection conn = getConnection())
+            long orderId;
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "INSERT INTO Ordenes (MesaID, Estado, CantidadClientes) VALUES (@tableID, @state, @customers); SELECT SCOPE_IDENTITY();";
+                    command.CommandText = "INSERT INTO Ordenes (MesaID, Estado, CantidadClientes) VALUES (@tableID, @state, @customers) RETURNING OrdenID;";
+
 
                     command.Parameters.AddWithValue("@tableID", TableID);
                     command.Parameters.AddWithValue("@state", state);
                     command.Parameters.AddWithValue("@customers", customers);
 
-                    orderId = Convert.ToInt32(command.ExecuteScalar());
+                    orderId = Convert.ToInt64(command.ExecuteScalar());
                 }
             }
 
@@ -57,19 +59,19 @@ namespace DataAccessLayer.Entities
         }
 
         //Metodo que obtiene el valor de un registro de las ordenes en especifico
-        public DataTable getOrder(int orderID)
+        public DataTable getOrder(long orderID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Ordenes WHERE OrdenID = @id";
 
                     command.Parameters.AddWithValue("@id", orderID);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     ordenes.Clear();
                     ordenes.Load(reader);
@@ -83,15 +85,15 @@ namespace DataAccessLayer.Entities
         {
             List<string> tableList = new List<string>();
 
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT DISTINCT MesaID FROM Ordenes WHERE Estado IN ('En Proceso', 'Lista', 'Servida');";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -104,12 +106,12 @@ namespace DataAccessLayer.Entities
             return tableList;
         }
 
-        public void updateOrder(int orderID, string tableID, string state, int quantity)
+        public void updateOrder(long orderID, string tableID, string state, int quantity)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand()) 
+                using(NpgsqlCommand command = new NpgsqlCommand()) 
                 {
                     command.Connection = conn;
                     command.CommandText = "UPDATE Ordenes SET MesaID = @tableId, Estado = @state, CantidadClientes = @quantity WHERE OrdenID = @orderId";

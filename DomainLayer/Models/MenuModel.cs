@@ -43,7 +43,7 @@ namespace DomainLayer.Models
         public DataTable getMenu(string dishID, string dishName)
         {
             DataTable menu = new DataTable();
-            menu = menuDA.getMenu(dishID, dishName);
+            menu = menuDA.getMenu(long.Parse(dishID), dishName);
             return menu;
         }
 
@@ -56,7 +56,7 @@ namespace DomainLayer.Models
             validate = double.TryParse(priceS, out price);
             if (validate)
             {
-                menuDA.updateMenu(int.Parse(id), name, description, state, price);
+                menuDA.updateMenu(long.Parse(id), name, description, state, price);
                 return true;
             }
             else

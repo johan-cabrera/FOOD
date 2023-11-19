@@ -65,8 +65,6 @@ namespace FOOD
             {
                 DataRow row = order.Rows[0];
 
-                
-                
                 orderID = row["OrdenID"].ToString();
                 subtotal = cuentasModel.getSubTotal(orderID);
                 propina = subtotal * PROPINA;

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using DataAccessLayer.Connection;
 using System.Data;
 using CommonUtility.Cache;
+using Npgsql;
 
 namespace DataAccessLayer.Entities
 {
@@ -15,12 +16,12 @@ namespace DataAccessLayer.Entities
         public bool Login(string user, string pass)
         {
             //Se crea la conexion
-            using(SqlConnection conn = getConnection())
+            using(NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
 
                 //Se crea el comando para verificar usuario y contraseña
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Usuarios WHERE UsuarioID=@user AND Contraseña=@pass";
@@ -28,7 +29,7 @@ namespace DataAccessLayer.Entities
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.Text;
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     if (reader.HasRows)
                     {

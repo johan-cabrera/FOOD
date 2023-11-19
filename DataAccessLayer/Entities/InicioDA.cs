@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Connection;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -33,25 +34,26 @@ namespace DataAccessLayer.Entities
         //Metodo para obtener los datos del dashboard
         private void getDashboardValues()
         {
-            using(SqlConnection conn = getConnection())
+            using(NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     try
                     {
-                        command.CommandText = "SELECT SUM(Total) FROM Cuentas WHERE CAST(FechaCierre AS DATE) = CAST(GETDATE() AS DATE)";
+                        command.CommandText = "SELECT SUM(Total) FROM Cuentas WHERE FechaCierre::DATE = CURRENT_DATE";
                         TotalRevenue = Convert.ToDouble(command.ExecuteScalar());
 
-                        command.CommandText = "SELECT COUNT(CuentaID) FROM Cuentas WHERE CAST(FechaCierre AS DATE) = CAST(GETDATE() AS DATE)";
+                        command.CommandText = "SELECT COUNT(CuentaID) FROM Cuentas WHERE FechaCierre::DATE = CURRENT_DATE";
                         TotalSales = Convert.ToInt32(command.ExecuteScalar());
 
-                        command.CommandText = "SELECT SUM(O.CantidadClientes) FROM Ordenes O INNER JOIN Cuentas C ON C.OrdenID = O.OrdenID WHERE CAST(FechaCierre AS DATE) = CAST(GETDATE() AS DATE)";
+                        command.CommandText = "SELECT SUM(O.CantidadClientes) FROM Ordenes O INNER JOIN Cuentas C ON C.OrdenID = O.OrdenID WHERE FechaCierre::DATE = CURRENT_DATE";
                         TotalCustomers = Convert.ToInt32(command.ExecuteScalar());
 
                         command.CommandText = "SELECT COUNT(MesaID) FROM Mesas WHERE Estado = 'Disponible'";
                         TotalTables = Convert.ToInt32(command.ExecuteScalar());
+
                     }
                     catch (Exception ex)
                     {
@@ -65,16 +67,16 @@ namespace DataAccessLayer.Entities
         private void GetGrossRevenueList()
         {
             GrossRevenueList = new List<RevenueByDate>();
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
 
-                    command.CommandText = @"SELECT FechaCierre, SUM(Total) FROM Cuentas WHERE FechaCierre BETWEEN DATEADD(DAY, -7, GETDATE()) AND GETDATE() GROUP BY FechaCierre";
-                    
-                    SqlDataReader reader = command.ExecuteReader();
+                    command.CommandText = "SELECT FechaCierre, SUM(Total) FROM Cuentas WHERE FechaCierre BETWEEN CURRENT_DATE - INTERVAL '7 days' AND CURRENT_DATE GROUP BY FechaCierre ORDER BY FechaCierre ASC;";
+
+                    NpgsqlDataReader reader = command.ExecuteReader();
                     
                     RevenueByDate result = new RevenueByDate();
 
@@ -95,16 +97,16 @@ namespace DataAccessLayer.Entities
         private void GetTopProductsList()
         {
             TopProductsList = new List<TopProducts>();
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using(NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
 
-                    command.CommandText = "SELECT TOP 5 M.NombrePlatillo, SUM(DO.Cantidad) AS TotalCantidad FROM DetalleOrden DO INNER JOIN Menu M ON M.PlatilloID = DO.PlatilloID INNER JOIN Cuentas C ON C.OrdenID = DO.OrdenID WHERE CAST(C.FechaCierre AS DATE) = CAST(GETDATE() AS DATE) GROUP BY M.NombrePlatillo ORDER BY TotalCantidad DESC;";
-                   
-                    SqlDataReader reader = command.ExecuteReader();
+                    command.CommandText = "SELECT M.NombrePlatillo, SUM(OD.Cantidad) AS TotalCantidad FROM DetalleOrden OD INNER JOIN Menu M ON M.PlatilloID = OD.PlatilloID INNER JOIN Cuentas C ON C.OrdenID = OD.OrdenID WHERE CAST(C.FechaCierre AS DATE) = CURRENT_DATE GROUP BY M.NombrePlatillo ORDER BY TotalCantidad DESC LIMIT 5;";
+
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     TopProducts result = new TopProducts();
 

@@ -21,7 +21,7 @@ namespace DomainLayer.Models
         }
 
         //Metodo que manda a insertar un registro y devuelve el id generado
-        public int inserOrder(string tableID, string state, string customers)
+        public long inserOrder(string tableID, string state, string customers)
         {
             return ordenesDA.insertOrder(tableID, state, int.Parse(customers));
         }
@@ -30,7 +30,7 @@ namespace DomainLayer.Models
         public DataTable getOrder(string orderID)
         {
             DataTable order = new DataTable();
-            order = ordenesDA.getOrder(int.Parse(orderID));
+            order = ordenesDA.getOrder(long.Parse(orderID));
             return order;
         }
 
@@ -52,7 +52,7 @@ namespace DomainLayer.Models
 
             if (validate)
             {
-                ordenesDA.updateOrder(int.Parse(orderID), tableID, state, quantity);
+                ordenesDA.updateOrder(long.Parse(orderID), tableID, state, quantity);
                 return true;
             }
             else

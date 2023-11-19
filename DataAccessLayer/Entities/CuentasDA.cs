@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Npgsql;
 
 namespace DataAccessLayer.Entities
 {
@@ -16,39 +17,45 @@ namespace DataAccessLayer.Entities
         DataTable ordenes = new DataTable();
         DataTable receipt = new DataTable();
 
-        //Metodo para obtener el sub total de la cuenta
-        public double getSubTotal(int id)
+        // Método para obtener el subtotal de la cuenta
+        public double getSubTotal(long id)
         {
-            double subtotal;
-            using(SqlConnection conn = getConnection())
+            double subtotal = 0;
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand()) 
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "SELECT SUM(M.Precio * DO.Cantidad) AS Subtotal FROM DetalleOrden DO INNER JOIN Menu M ON DO.PlatilloID = M.PlatilloID WHERE DO.OrdenID = @id GROUP BY DO.OrdenID";
+                    command.CommandText = "SELECT SUM(M.Precio * OD.Cantidad) AS Subtotal FROM DetalleOrden OD INNER JOIN Menu M ON OD.PlatilloID = M.PlatilloID WHERE OD.OrdenID = @id GROUP BY OD.OrdenID";
 
                     command.Parameters.AddWithValue("@id", id);
 
-                    subtotal = double.Parse(command.ExecuteScalar().ToString());
+                    object result = command.ExecuteScalar();
+
+                    if (result != null  && result != DBNull.Value)
+                    {
+                        subtotal = Convert.ToDouble(result);
+                    }
+                    
                 }
             }
 
             return subtotal;
         }
 
-        //Metodo para obtener los datos de la tabla Cuentas
+        // Método para obtener los datos de la tabla Cuentas
         public DataTable showBill()
         {
-            using(SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Cuentas ORDER BY CuentaID DESC";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     bill.Clear();
                     bill.Load(reader);
@@ -57,13 +64,13 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo para insertar un registro a las cuentas
-        public void insertBill(int orderID, DateTime date, double subtotal, double tip, double discount, double total)
+        // Método para insertar un registro a las cuentas
+        public void insertBill(long orderID, DateTime date, double subtotal, double tip, double discount, double total)
         {
-            using(SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using(SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "INSERT INTO Cuentas (OrdenID, FechaCierre, SubTotal, Propinas, Descuentos, Total, EstadoPago) VALUES (@orderID, @date, @subtotal, @tip, @discount, @total, 'Pendiente')";
@@ -80,18 +87,18 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que obtiene el valor de un registro de ordenes por mesaID, que no este cancelado o cerrado
+        // Método que obtiene el valor de un registro de ordenes por mesaID, que no este cancelado o cerrado
         public DataTable getTablesInOrders()
         {
-            using(SqlConnection conn = getConnection()) 
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT DISTINCT MesaID FROM Ordenes WHERE Estado IN ('En Proceso', 'Lista', 'Servida');";
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     tables.Clear();
                     tables.Load(reader);
@@ -100,20 +107,20 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que obtiene el valor de un registro de las ordenes por MesaID
+        // Método que obtiene el valor de un registro de las ordenes por MesaID
         public DataTable getOrderByTableID(string tableID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Ordenes WHERE MesaID = @id AND Estado NOT IN ('Cancelada', 'Cerrada')";
 
                     command.Parameters.AddWithValue("@id", tableID);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     ordenes.Clear();
                     ordenes.Load(reader);
@@ -122,20 +129,20 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que obtiene el valor de un registro de cuentas en especifico
-        public DataTable getBill(int billID)
+        // Método que obtiene el valor de un registro de cuentas en especifico
+        public DataTable getBill(long billID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "SELECT * FROM Cuentas WHERE CuentaID = @id";
 
                     command.Parameters.AddWithValue("@id", billID);
 
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     bill.Clear();
                     bill.Load(reader);
@@ -144,13 +151,13 @@ namespace DataAccessLayer.Entities
             }
         }
 
-        //Metodo que actualiza el estado de una cuenta
-        public void updateBill(int billID, string state)
+        // Método que actualiza el estado de una cuenta
+        public void updateBill(long billID, string state)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
                     command.CommandText = "UPDATE Cuentas SET EstadoPago = @state WHERE CuentaID = @billId";
@@ -158,27 +165,25 @@ namespace DataAccessLayer.Entities
                     command.Parameters.AddWithValue("@billId", billID);
                     command.Parameters.AddWithValue("@state", state);
 
-
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        //Metodo para retornar detalles del recibo
-        public DataTable receiptBill(int orderID)
+        // Método para retornar detalles del recibo
+        public DataTable receiptBill(long orderID)
         {
-            using (SqlConnection conn = getConnection())
+            using (NpgsqlConnection conn = getConnection())
             {
                 conn.Open();
-                using (SqlCommand command = new SqlCommand())
+                using (NpgsqlCommand command = new NpgsqlCommand())
                 {
                     command.Connection = conn;
-                    command.CommandText = "SELECT M.NombrePlatillo, DO.Cantidad, (DO.PrecioUnitario * DO.Cantidad) AS Precio FROM DetalleOrden DO INNER JOIN Menu M ON M.PlatilloID = DO.PlatilloID WHERE OrdenID = @orderID";
+                    command.CommandText = "SELECT M.NombrePlatillo, OD.Cantidad, (OD.PrecioUnitario * OD.Cantidad) AS Precio FROM DetalleOrden OD INNER JOIN Menu M ON M.PlatilloID = OD.PlatilloID WHERE OrdenID = @orderID";
 
                     command.Parameters.AddWithValue("@orderId", orderID);
 
-
-                    SqlDataReader reader = command.ExecuteReader();
+                    NpgsqlDataReader reader = command.ExecuteReader();
 
                     receipt.Clear();
                     receipt.Load(reader);

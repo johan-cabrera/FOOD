@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("FOOD")]
-[assembly: AssemblyDescription("Una aplicación de gestión integral para mesas, órdenes, cuentas y menú de un restaurante.")]
+[assembly: AssemblyDescription("solución integral para administrar y gestionar eficientemente mesas, órdenes y cuentas de un restaurante")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FOOD")]
 [assembly: AssemblyProduct("FOOD")]

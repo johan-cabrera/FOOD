@@ -16,7 +16,7 @@ namespace DomainLayer.Models
         //Metodo que recibe y retorna el subtotal
         public double getSubTotal(string id)
         {
-            return cuentasDA.getSubTotal(int.Parse(id));
+            return cuentasDA.getSubTotal(long.Parse(id));
         }
 
         //Metodo que recibe y retorna las cuentas
@@ -30,7 +30,7 @@ namespace DomainLayer.Models
         //Metodo que da formato a los datos y los manda a insertar
         public void insertBill(string orderID, DateTime date, string subtotal, string tip, string discount, string total)
         {
-            cuentasDA.insertBill(int.Parse(orderID), date, double.Parse(subtotal), double.Parse(tip), double.Parse(discount), double.Parse(total));
+            cuentasDA.insertBill(long.Parse(orderID), date, double.Parse(subtotal), double.Parse(tip), double.Parse(discount), double.Parse(total));
         }
 
         //Metodo que obtiene el valor de un registro de las ordenes por mesaID que no este cancelado o cerrado
@@ -51,22 +51,22 @@ namespace DomainLayer.Models
         public DataTable getBill(string billID)
         {
             DataTable bill = new DataTable();
-            bill = cuentasDA.getBill(int.Parse(billID));
+            bill = cuentasDA.getBill(long.Parse(billID));
             return bill;
         }
 
         public void updateBill(string billID, string orderID, string state)
         {
-            DataTable order = ordenesDA.getOrder(int.Parse(orderID));
+            DataTable order = ordenesDA.getOrder(long.Parse(orderID));
             DataRow row = order.Rows[0];
-            cuentasDA.updateBill(int.Parse(billID), state);
-            if(state == "Cancelado") ordenesDA.updateOrder(int.Parse(orderID), row["MesaID"].ToString(), "Cerrada", int.Parse(row["CantidadClientes"].ToString()));
+            cuentasDA.updateBill(long.Parse(billID), state);
+            if(state == "Cancelado") ordenesDA.updateOrder(long.Parse(orderID), row["MesaID"].ToString(), "Cerrada", int.Parse(row["CantidadClientes"].ToString()));
         }
 
         public DataTable receiptBill(string orderID)
         {
             DataTable receipt = new DataTable();
-            receipt = cuentasDA.receiptBill(int.Parse(orderID));
+            receipt = cuentasDA.receiptBill(long.Parse(orderID));
             return receipt;
         }
     }
